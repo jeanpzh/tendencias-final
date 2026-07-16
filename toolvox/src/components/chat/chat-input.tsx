@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { SendHorizontal, Loader2 } from "lucide-react";
+import { SendHorizontal, Loader2, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ChatInputProps {
@@ -42,7 +42,7 @@ export function ChatInput({
   };
 
   return (
-    <div className="border-t bg-background p-4">
+    <div className="border-t bg-background/80 backdrop-blur-sm p-4 shrink-0">
       <div className="flex items-end gap-2 max-w-3xl mx-auto">
         <textarea
           ref={textareaRef}
@@ -55,17 +55,20 @@ export function ChatInput({
         />
         <Button
           onClick={handleSubmit}
-          disabled={!input.trim() || isLoading}
+          disabled={!input.trim() && !isLoading}
           size="icon"
-          className="h-12 w-12 shrink-0 rounded-xl"
+          className="h-11 w-11 shrink-0 rounded-xl"
         >
           {isLoading ? (
-            <Loader2 className="h-5 w-5 animate-spin" />
+            <Square className="h-4 w-4" />
           ) : (
             <SendHorizontal className="h-5 w-5" />
           )}
         </Button>
       </div>
+      <p className="text-[10px] text-muted-foreground/50 text-center mt-2 hidden sm:block">
+        Enter para enviar · Shift+Enter para nueva línea
+      </p>
     </div>
   );
 }

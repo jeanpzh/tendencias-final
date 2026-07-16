@@ -5,6 +5,6 @@ const openrouter = createOpenAI({
   apiKey: process.env.OPENROUTER_API_KEY ?? "",
 });
 
-export const hy3 = openrouter.chat("tencent/hy3");
+export const hy3 = openrouter.chat("tencent/hy3:free");
 
 export const DEFAULT_MODEL = hy3;

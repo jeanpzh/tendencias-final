@@ -5,6 +5,8 @@ import { useChat } from "@ai-sdk/react";
 import { Message } from "./message";
 import { ChatInput } from "./chat-input";
 import { DEMOS, type DemoId } from "@/lib/constants";
+import { ModelSelector } from "@/components/model-selector";
+import { ApiUsage } from "@/components/api-usage";
 import {
   saveChat,
   saveMessage,
@@ -27,6 +29,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [loadedMessages, setLoadedMessages] = useState<any[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedModel, setSelectedModel] = useState("tencent/hy3:free");
 
   const demo = DEMOS.find((d) => d.id === (demoId as DemoId));
   const suggestions = demo?.suggestions ?? [];
@@ -49,11 +52,17 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
     load();
   }, [demoId]);
 
+  // Auto-scroll to bottom
   useEffect(() => {
     if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      requestAnimationFrame(() => {
+        scrollRef.current?.scrollTo({
+          top: scrollRef.current.scrollHeight,
+          behavior: "smooth",
+        });
+      });
     }
-  }, [messages]);
+  }, [messages, status]);
 
   // Save messages to IndexedDB when they change
   const persistMessages = useCallback(
@@ -93,7 +102,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
 
     await sendMessage(
       { text: message },
-      { body: { systemPrompt, chatId: currentChatId } }
+      { body: { systemPrompt, chatId: currentChatId, model: selectedModel } }
     );
   };
 
@@ -138,17 +147,17 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
 
   return (
     <div className="flex flex-col h-full">
-      {/* Chat history sidebar */}
+      {/* Chat history tabs */}
       {chatHistory.length > 0 && (
-        <div className="border-b bg-muted/30 px-4 py-2">
+        <div className="border-b bg-muted/30 px-4 py-2 shrink-0">
           <div className="flex items-center gap-2 max-w-3xl mx-auto">
             <button
               onClick={handleNewChat}
               className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              + Nueva conversación
+              + Nueva
             </button>
-            <div className="flex-1 overflow-x-auto flex gap-2">
+            <div className="flex-1 overflow-x-auto flex gap-2 scrollbar-thin">
               {chatHistory.map((chat) => (
                 <div
                   key={chat.id}
@@ -177,11 +186,14 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
       )}
 
       {/* Messages area */}
-      <div className="flex-1 overflow-hidden" ref={scrollRef}>
-        <div className="max-w-3xl mx-auto py-6 px-4 space-y-6 min-h-full">
+      <div
+        ref={scrollRef}
+        className="flex-1 overflow-y-auto"
+      >
+        <div className="max-w-3xl mx-auto py-6 px-4 space-y-4 min-h-full">
           {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center h-[60vh] text-center">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-4">
+            <div className="flex flex-col items-center justify-center h-[60vh] text-center animate-fade-in">
+              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-violet-500/20">
                 <span className="text-2xl">💬</span>
               </div>
               <h2 className="text-xl font-semibold mb-2">
@@ -196,7 +208,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
                   <button
                     key={suggestion}
                     onClick={() => handleSend(suggestion)}
-                    className="rounded-full border bg-muted/50 px-3 py-1.5 text-xs hover:bg-muted transition-colors text-left"
+                    className="rounded-full border bg-muted/50 px-3 py-1.5 text-xs hover:bg-muted hover:border-primary/50 transition-all text-left"
                   >
                     {suggestion}
                   </button>
@@ -207,8 +219,31 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
           {messages.map((message) => (
             <Message key={message.id} message={message} />
           ))}
+
+          {/* Typing indicator */}
+          {status === "submitted" && (
+            <div className="flex gap-3 animate-fade-in">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="bg-muted rounded-xl rounded-bl-sm px-4 py-3">
+                <div className="flex items-center gap-1.5">
+                  <div className="flex gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0s" }} />
+                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0.16s" }} />
+                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0.32s" }} />
+                  </div>
+                  <span className="text-xs text-muted-foreground ml-1">Pensando...</span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+
+      {/* Input area */}
       <ChatInput onSubmit={handleSend} isLoading={isLoading} />
     </div>
   );

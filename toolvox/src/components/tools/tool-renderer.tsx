@@ -1,5 +1,6 @@
 "use client";
 
+import { Loader2 } from "lucide-react";
 import { ChartBlock } from "./chart-block";
 import { TableBlock } from "./table-block";
 import { FormBlock } from "./form-block";
@@ -21,27 +22,29 @@ interface ToolRendererProps {
   toolInvocation: ToolInvocation;
 }
 
+const TOOL_LABELS: Record<string, string> = {
+  render_chart: "gráfico",
+  render_table: "tabla",
+  render_form: "formulario",
+  render_dashboard: "dashboard",
+  render_kanban: "tablero kanban",
+  render_config: "panel de config",
+  render_code: "bloque de código",
+  render_selector: "selector",
+  render_slider: "slider",
+};
+
 export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
   const { toolName, args, state } = toolInvocation;
 
   if (state === "call") {
+    const label = TOOL_LABELS[toolName] || toolName;
     return (
-      <div className="my-3 flex items-center gap-2 text-xs text-muted-foreground">
-        <div className="flex gap-1">
-          <span
-            className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-dot"
-            style={{ animationDelay: "0s" }}
-          />
-          <span
-            className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-dot"
-            style={{ animationDelay: "0.16s" }}
-          />
-          <span
-            className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-dot"
-            style={{ animationDelay: "0.32s" }}
-          />
-        </div>
-        Generando componente...
+      <div className="my-3 flex items-center gap-2.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2.5 text-xs text-muted-foreground">
+        <Loader2 className="h-3.5 w-3.5 text-primary animate-spin shrink-0" />
+        <span>
+          Generando <span className="font-medium text-foreground">{label}</span>...
+        </span>
       </div>
     );
   }
