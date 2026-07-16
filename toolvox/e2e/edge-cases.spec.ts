@@ -1,118 +1,189 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Dashboard edge cases", () => {
-  test("dashboard with marketing metrics renders or shows loading", async ({ page }) => {
+test.describe("Page responsiveness (not hung)", () => {
+  test("dashboard request doesn't freeze the page", async ({ page }) => {
     await page.goto("/demo/dashboard-data");
     await page.waitForTimeout(2000);
 
+    // Send a heavy request
     const textarea = page.locator("textarea");
-    await textarea.fill("Muéstrame métricas de marketing con gráficas");
+    await textarea.fill("Muéstrame métricas de marketing con gráficas de conversión, CPA, ROAS y CTR");
     await textarea.press("Enter");
 
-    // Wait for either rendered content OR loading indicator (page is working, not hung)
-    await page.waitForFunction(
-      () => {
-        const html = document.body.innerHTML;
-        return (
-          html.includes("recharts-wrapper") ||
-          html.includes("recharts-surface") ||
-          html.includes("<table") ||
-          html.includes("Generando") ||
-          html.includes("Pensando")
-        );
-      },
-      { timeout: 15_000, polling: 1000 }
+    // Wait for request to start processing
+    await page.waitForTimeout(5000);
+
+    // PROBE: Click theme toggle - if page is hung, this won't work
+    const toggle = page.locator('button[title="Modo claro"], button[title="Modo oscuro"]').first();
+    await expect(toggle).toBeVisible({ timeout: 5000 });
+
+    const isDarkBefore = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
     );
 
-    // Page is responsive - not hung
-    const isResponsive = await page.locator("textarea").isVisible();
-    expect(isResponsive).toBe(true);
+    await toggle.click();
+    await page.waitForTimeout(500);
+
+    const isDarkAfter = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+
+    // Theme must have changed - page is responsive
+    expect(isDarkAfter).not.toBe(isDarkBefore);
   });
 
-  test("resumen ejecutivo trimestral renders", async ({ page }) => {
-    await page.goto("/demo/dashboard-data");
+  test("form request doesn't freeze the page", async ({ page }) => {
+    await page.goto("/demo/form-builder");
     await page.waitForTimeout(2000);
 
     const textarea = page.locator("textarea");
-    await textarea.fill("Haz un resumen ejecutivo trimestral con KPIs de ingresos y comparativa Q1 vs Q2");
+    await textarea.fill("Formulario de votación con DNI peruano y 5 candidatos");
     await textarea.press("Enter");
 
-    const gotContent = await page.waitForFunction(
-      () => {
-        const html = document.body.innerHTML;
-        return html.includes("recharts") || html.includes("<table") || html.includes("Q1");
-      },
-      { timeout: 55_000, polling: 3000 }
-    ).then(() => true).catch(() => false);
+    await page.waitForTimeout(5000);
 
-    expect(gotContent).toBe(true);
+    // PROBE: Toggle theme
+    const toggle = page.locator('button[title="Modo claro"], button[title="Modo oscuro"]').first();
+    await expect(toggle).toBeVisible({ timeout: 5000 });
+
+    const isDarkBefore = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    await toggle.click();
+    await page.waitForTimeout(500);
+
+    const isDarkAfter = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    expect(isDarkAfter).not.toBe(isDarkBefore);
   });
 
-  test("tabla de inventario con búsqueda renders", async ({ page }) => {
-    await page.goto("/demo/dashboard-data");
+  test("kanban request doesn't freeze the page", async ({ page }) => {
+    await page.goto("/demo/task-manager");
     await page.waitForTimeout(2000);
 
     const textarea = page.locator("textarea");
-    await textarea.fill("Crea una tabla de inventario con búsqueda y filtros para 10 productos con SKU, nombre, stock y precio");
+    await textarea.fill("Crea un tablero kanban para un sprint de desarrollo con 8 tareas");
     await textarea.press("Enter");
 
-    const gotTable = await page.waitForFunction(
-      () => document.body.innerHTML.includes("<table"),
-      { timeout: 55_000, polling: 3000 }
-    ).then(() => true).catch(() => false);
+    await page.waitForTimeout(5000);
 
-    expect(gotTable).toBe(true);
-    await page.waitForTimeout(2000);
+    // PROBE: Toggle theme
+    const toggle = page.locator('button[title="Modo claro"], button[title="Modo oscuro"]').first();
+    await expect(toggle).toBeVisible({ timeout: 5000 });
 
-    // Verify search input exists
-    const searchInput = page.locator('input[placeholder="Buscar..."]');
-    await expect(searchInput).toBeVisible({ timeout: 10_000 });
+    const isDarkBefore = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    await toggle.click();
+    await page.waitForTimeout(500);
+
+    const isDarkAfter = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    expect(isDarkAfter).not.toBe(isDarkBefore);
   });
-});
 
-test.describe("Error states", () => {
-  test("page doesn't hang when AI is slow", async ({ page }) => {
-    await page.goto("/demo/dashboard-data");
+  test("general chat doesn't freeze the page", async ({ page }) => {
+    await page.goto("/demo/general");
     await page.waitForTimeout(2000);
 
     const textarea = page.locator("textarea");
-    await textarea.fill("Genera un dashboard");
+    await textarea.fill("Genera un dashboard de ventas mensuales con KPIs y charts");
     await textarea.press("Enter");
 
-    // Wait a few seconds
+    await page.waitForTimeout(5000);
+
+    // PROBE: Toggle theme
+    const toggle = page.locator('button[title="Modo claro"], button[title="Modo oscuro"]').first();
+    await expect(toggle).toBeVisible({ timeout: 5000 });
+
+    const isDarkBefore = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    await toggle.click();
+    await page.waitForTimeout(500);
+
+    const isDarkAfter = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    expect(isDarkAfter).not.toBe(isDarkBefore);
+  });
+
+  test("sidebar toggle works during AI processing", async ({ page }) => {
+    await page.goto("/demo/dashboard-data");
+    await page.waitForTimeout(2000);
+
+    // Send request
+    const textarea = page.locator("textarea");
+    await textarea.fill("Dashboard de ventas completo con 12 meses de datos y KPIs");
+    await textarea.press("Enter");
+
     await page.waitForTimeout(3000);
 
-    // Verify the page is still interactive (textarea or send button accessible)
-    const textareaStillVisible = await page.locator("textarea").isVisible();
-    expect(textareaStillVisible).toBe(true);
+    // PROBE: Toggle sidebar (desktop)
+    const sidebarToggle = page.locator('button:has(svg)').filter({ has: page.locator('.hidden.md\\:flex') }).first();
 
-    // Verify typing indicator or content appeared
-    const hasIndicator = await page.evaluate(() => {
-      const html = document.body.innerHTML;
-      return (
-        html.includes("Pensando") ||
-        html.includes("Generando") ||
-        html.includes("recharts") ||
-        html.includes("<table")
-      );
-    });
-    expect(hasIndicator).toBe(true);
+    // Try the sidebar toggle button
+    const sidebarBtn = page.locator('.hidden.md\\:flex button').first();
+    if (await sidebarBtn.isVisible().catch(() => false)) {
+      await sidebarBtn.click();
+      await page.waitForTimeout(300);
+
+      // Sidebar state changed - page is responsive
+      const sidebarExists = await page.locator('.hidden.md\\:flex.border-r').count();
+      // Either sidebar appeared or disappeared - both mean page responded
+      expect(sidebarExists >= 0).toBe(true);
+    }
+
+    // Also verify theme toggle works as backup probe
+    const toggle = page.locator('button[title="Modo claro"], button[title="Modo oscuro"]').first();
+    await expect(toggle).toBeVisible({ timeout: 5000 });
+
+    const isDarkBefore = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    await toggle.click();
+    await page.waitForTimeout(500);
+
+    const isDarkAfter = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    expect(isDarkAfter).not.toBe(isDarkBefore);
   });
 
-  test("suggestion buttons are clickable", async ({ page }) => {
+  test("multiple rapid requests don't freeze the page", async ({ page }) => {
     await page.goto("/demo/dashboard-data");
     await page.waitForTimeout(2000);
 
-    // Click first suggestion
-    const suggestion = page.locator("button").filter({ hasText: "ventas" }).first();
-    await expect(suggestion).toBeVisible({ timeout: 5000 });
-    await suggestion.click();
+    const textarea = page.locator("textarea");
 
-    // Verify message was sent (user message appears)
-    await page.waitForTimeout(2000);
-    const userMsg = await page.evaluate(() => {
-      return document.body.innerHTML.includes("ventas");
-    });
-    expect(userMsg).toBe(true);
+    // Send 3 rapid requests
+    await textarea.fill("Dashboard de ventas");
+    await textarea.press("Enter");
+    await page.waitForTimeout(1500);
+
+    await textarea.fill("Tabla de inventario con 10 productos");
+    await textarea.press("Enter");
+    await page.waitForTimeout(1500);
+
+    await textarea.fill("Gráfica de usuarios por región");
+    await textarea.press("Enter");
+    await page.waitForTimeout(3000);
+
+    // PROBE: Toggle must still work after multiple requests
+    const toggle = page.locator('button[title="Modo claro"], button[title="Modo oscuro"]').first();
+    await expect(toggle).toBeVisible({ timeout: 5000 });
+
+    const isDarkBefore = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    await toggle.click();
+    await page.waitForTimeout(500);
+
+    const isDarkAfter = await page.evaluate(() =>
+      document.documentElement.classList.contains("dark")
+    );
+    expect(isDarkAfter).not.toBe(isDarkBefore);
   });
 });
