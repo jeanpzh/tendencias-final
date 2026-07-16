@@ -16,11 +16,32 @@ const iconMap = {
   LayoutDashboard,
   Kanban,
   Settings2,
+  Sparkles,
 };
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "ToolVox",
+    url: "https://toolvox.vercel.app",
+    description:
+      "Componentes interactivos generados por IA dentro de un chat. Charts, tablas, formularios, dashboards, y más.",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header */}
       <header className="border-b">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">

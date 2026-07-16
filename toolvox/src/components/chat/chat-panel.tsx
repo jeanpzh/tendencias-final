@@ -84,6 +84,10 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
     const currentChatId = activeChatId || chatId;
     setMobileSidebarOpen(false);
 
+    const isDark = document.documentElement.classList.contains("dark");
+    const themeState = isDark ? "oscuro" : "claro";
+    const finalPrompt = systemPrompt.replace(/__THEME_STATE__/g, themeState);
+
     if (!activeChatId) {
       const chat: StoredChat = {
         id: chatId,
@@ -99,7 +103,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
 
     await sendMessage(
       { text: message },
-      { body: { systemPrompt, chatId: currentChatId, model: selectedModel } }
+      { body: { systemPrompt: finalPrompt, chatId: currentChatId, model: selectedModel } }
     );
   };
 
