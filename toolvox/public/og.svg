@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0a1e"/>
+      <stop offset="100%" style="stop-color:#1a0f2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#A855F7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="200" cy="315" r="180" fill="url(#accent)" opacity="0.15"/>
+  <circle cx="1000" cy="315" r="250" fill="url(#accent)" opacity="0.08"/>
+  <g transform="translate(140, 235)" filter="url(#glow)">
+    <rect width="120" height="120" rx="28" fill="url(#accent)"/>
+    <path d="M35 60 L55 40 L75 60 L60 60 L60 85 L50 85 L50 60 Z" fill="white" opacity="0.9"/>
+    <circle cx="80" cy="50" r="6" fill="white" opacity="0.9"/>
+    <circle cx="80" cy="70" r="6" fill="white" opacity="0.9"/>
+    <circle cx="80" cy="90" r="6" fill="white" opacity="0.9"/>
+  </g>
+  <text x="300" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="100" font-weight="800" fill="white" letter-spacing="-2">Tool</text>
+  <text x="570" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="100" font-weight="800" fill="url(#accent)" letter-spacing="-2">Vox</text>
+  <text x="300" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="36" fill="#9CA3AF" font-weight="400">Genera interfaces interactivas con IA en tiempo real</text>
+  <rect x="300" y="420" width="180" height="4" rx="2" fill="url(#accent)" opacity="0.6"/>
+</svg>

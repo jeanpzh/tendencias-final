@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { Loader2 } from "lucide-react";
 import { ChartBlock } from "./chart-block";
 import { TableBlock } from "./table-block";
@@ -10,6 +11,51 @@ import { ConfigBlock } from "./config-block";
 import { CodeBlock } from "./code-block";
 import { SelectorBlock } from "./selector-block";
 import { SliderBlock } from "./slider-block";
+
+function applyAction(action: Record<string, any>) {
+  const root = document.documentElement;
+
+  switch (action.action) {
+    case "set_theme":
+      if (action.mode === "dark") {
+        root.classList.add("dark");
+        root.classList.remove("light");
+      } else {
+        root.classList.remove("dark");
+        root.classList.add("light");
+      }
+      break;
+    case "set_font_size":
+      root.style.fontSize = `${action.size}px`;
+      break;
+    case "set_font":
+      root.style.setProperty("--font-sans", action.family);
+      break;
+    case "set_accent_color":
+      root.style.setProperty("--primary", action.color);
+      break;
+  }
+}
+
+function ActionConfirmation({ action }: { action: Record<string, any> }) {
+  useEffect(() => {
+    applyAction(action);
+  }, [action]);
+
+  const labels: Record<string, string> = {
+    set_theme: action.mode === "dark" ? "Modo oscuro activado" : "Modo claro activado",
+    set_font_size: `Tamaño de fuente: ${action.size}px`,
+    set_font: `Fuente: ${action.family}`,
+    set_accent_color: `Color de acento cambiado`,
+  };
+
+  return (
+    <div className="my-2 flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-xs text-muted-foreground">
+      <span className="text-primary">✓</span>
+      <span>{labels[action.action] || "Acción ejecutada"}</span>
+    </div>
+  );
+}
 
 interface ToolInvocation {
   toolName: string;
@@ -32,10 +78,19 @@ const TOOL_LABELS: Record<string, string> = {
   render_code: "bloque de código",
   render_selector: "selector",
   render_slider: "slider",
+  set_theme: "tema",
+  set_font_size: "tamaño de fuente",
+  set_font: "tipografía",
+  set_accent_color: "color de acento",
 };
 
 export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
-  const { toolName, args, state } = toolInvocation;
+  const { toolName, args, state, result } = toolInvocation;
+
+  // Handle action tools on result
+  if (state === "result" && result?.action) {
+    return <ActionConfirmation action={result} />;
+  }
 
   if (state === "call") {
     const label = TOOL_LABELS[toolName] || toolName;
@@ -43,7 +98,11 @@ export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
       <div className="my-3 flex items-center gap-2.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-2.5 text-xs text-muted-foreground">
         <Loader2 className="h-3.5 w-3.5 text-primary animate-spin shrink-0" />
         <span>
-          Generando <span className="font-medium text-foreground">{label}</span>...
+          {toolName.startsWith("set_") ? (
+            <>Aplicando <span className="font-medium text-foreground">{label}</span>...</>
+          ) : (
+            <>Generando <span className="font-medium text-foreground">{label}</span>...</>
+          )}
         </span>
       </div>
     );
@@ -52,10 +111,13 @@ export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
   if (state === "error") {
     return (
       <div className="my-3 rounded-lg border border-destructive/50 bg-destructive/5 p-3 text-xs text-destructive">
-        Error al generar el componente
+        Error al ejecutar la herramienta
       </div>
     );
   }
+
+  // Action tools don't render UI components
+  if (toolName.startsWith("set_")) return null;
 
   const data = args;
 

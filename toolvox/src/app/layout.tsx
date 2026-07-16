@@ -72,9 +72,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/logo.svg",
+  },
+  other: {
+    "theme-color": "#8B5CF6",
   },
 };
 

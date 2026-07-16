@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   FileInput,
   LayoutDashboard,
@@ -46,9 +47,13 @@ export default function Home() {
       <header className="border-b">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-              <Sparkles className="h-4 w-4 text-white" />
-            </div>
+            <Image
+              src="/logo.svg"
+              alt="ToolVox Logo"
+              width={32}
+              height={32}
+              className="rounded-lg"
+            />
             <span className="font-bold text-lg tracking-tight">ToolVox</span>
           </div>
           <span className="text-xs text-muted-foreground">
