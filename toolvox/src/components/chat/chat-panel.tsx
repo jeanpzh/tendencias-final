@@ -31,6 +31,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
   const [selectedModel, setSelectedModel] = useState("tencent/hy3:free");
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
 
   const demo = DEMOS.find((d) => d.id === (demoId as DemoId));
   const suggestions = demo?.suggestions ?? [];
@@ -84,6 +85,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
   const handleSend = async (message: string) => {
     const currentChatId = activeChatId || chatId;
     setMobileSidebarOpen(false);
+    setSendError(null);
 
     const isDark = document.documentElement.classList.contains("dark");
     const themeState = isDark ? "oscuro" : "claro";
@@ -102,10 +104,14 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
       setChatHistory((prev) => [chat, ...prev]);
     }
 
-    await sendMessage(
-      { text: message },
-      { body: { systemPrompt: finalPrompt, chatId: currentChatId, model: selectedModel } }
-    );
+    try {
+      await sendMessage(
+        { text: message },
+        { body: { systemPrompt: finalPrompt, chatId: currentChatId, model: selectedModel } }
+      );
+    } catch (err) {
+      setSendError("Error al conectar con la IA. Verifica tu conexión y API key.");
+    }
   };
 
   useEffect(() => {
@@ -296,6 +302,15 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
                     <span className="text-xs text-muted-foreground ml-1">Pensando...</span>
                   </div>
                 </div>
+              </div>
+            )}
+            {sendError && (
+              <div className="flex items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs text-destructive mx-4 mb-2">
+                <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+                <span>{sendError}</span>
+                <button onClick={() => setSendError(null)} className="ml-auto underline hover:no-underline">OK</button>
               </div>
             )}
           </div>

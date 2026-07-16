@@ -41,8 +41,8 @@ test.describe("Form Builder", () => {
     const formContent = page.locator('[class*="rounded"][class*="border"]').first();
     await expect(formContent).toBeVisible();
 
-    // Verify submit button exists
-    const submitBtn = page.locator('button:has-text("Registrar"), button:has-text("Enviar"), button:has-text("Submit")').first();
+    // Verify submit button exists (any button with Send icon inside a form)
+    const submitBtn = page.locator('form button[type="submit"], form button').first();
     await expect(submitBtn).toBeVisible();
   });
 

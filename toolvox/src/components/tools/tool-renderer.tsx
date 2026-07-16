@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { Loader2, AlertCircle } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 import { ChartBlock } from "./chart-block";
 import { TableBlock } from "./table-block";
@@ -77,30 +77,53 @@ export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
 
   if (state === "error") {
     return (
-      <div className="my-3 rounded-lg border border-destructive/50 bg-destructive/5 p-3 text-xs text-destructive">
-        Error al ejecutar la herramienta
+      <div className="my-3 rounded-lg border border-destructive/50 bg-destructive/5 p-3 text-xs text-destructive flex items-center gap-2">
+        <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+        <span>Error al ejecutar la herramienta. Intenta de nuevo.</span>
       </div>
     );
   }
 
   // Handle action tools on result
   if (state === "result" && result?.action) {
-    // Apply the action using the context
-    switch (result.action) {
-      case "set_theme":
-        theme.setDark(result.mode === "dark");
-        break;
-      case "set_font_size":
-        theme.setFontSize(result.size);
-        break;
-      case "set_font":
-        theme.setFontFamily(result.family);
-        break;
-      case "set_accent_color":
-        theme.setAccentColor(result.color);
-        break;
+    try {
+      switch (result.action) {
+        case "set_theme":
+          theme.setDark(result.mode === "dark");
+          break;
+        case "set_font_size":
+          theme.setFontSize(result.size);
+          break;
+        case "set_font":
+          theme.setFontFamily(result.family);
+          break;
+        case "set_accent_color":
+          theme.setAccentColor(result.color);
+          break;
+      }
+      return <ActionConfirmation action={result} theme={theme} />;
+    } catch (err) {
+      return (
+        <div className="my-2 flex items-center gap-2 rounded-lg border border-destructive/20 bg-destructive/5 px-3 py-2 text-xs text-destructive">
+          <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+          <span>Error al aplicar: {err instanceof Error ? err.message : "Error desconocido"}</span>
+        </div>
+      );
     }
-    return <ActionConfirmation action={result} theme={theme} />;
+  }
+
+  // Show theme errors
+  if (theme.lastError) {
+    const err = (
+      <div className="my-2 flex items-center gap-2 rounded-lg border border-destructive/20 bg-destructive/5 px-3 py-2 text-xs text-destructive">
+        <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+        <span>{theme.lastError}</span>
+        <button onClick={theme.clearError} className="ml-auto underline hover:no-underline">OK</button>
+      </div>
+    );
+    // Only show once by clearing after render
+    setTimeout(() => theme.clearError(), 100);
+    return err;
   }
 
   // Action tools don't render UI components

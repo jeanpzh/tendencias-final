@@ -10,7 +10,7 @@ test.describe("Home page", () => {
     ).toBeVisible();
 
     const cards = page.locator('a[href^="/demo/"]');
-    await expect(cards).toHaveCount(4);
+    await expect(cards).toHaveCount(5);
   });
 
   test("navigates to dashboard demo", async ({ page }) => {

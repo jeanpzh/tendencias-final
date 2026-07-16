@@ -9,12 +9,13 @@ interface ThemeState {
   accentColor: string;
 }
 
-interface ThemeContextType extends ThemeState {
+export interface ThemeContextType extends ThemeState {
   setDark: (dark: boolean) => void;
   setFontSize: (size: number) => void;
   setFontFamily: (family: string) => void;
   setAccentColor: (color: string) => void;
-  applyAll: () => void;
+  lastError: string | null;
+  clearError: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
@@ -24,7 +25,7 @@ const STORAGE_KEY = "toolvox-theme";
 const DEFAULTS: ThemeState = {
   dark: true,
   fontSize: 16,
-  fontFamily: "var(--font-geist-sans), Inter, system-ui, sans-serif",
+  fontFamily: "",
   accentColor: "",
 };
 
@@ -57,7 +58,7 @@ function applyThemeToDOM(state: ThemeState) {
   root.style.fontSize = `${state.fontSize}px`;
 
   if (state.fontFamily) {
-    root.style.setProperty("--font-sans", state.fontFamily);
+    root.style.fontFamily = state.fontFamily;
   }
 
   if (state.accentColor) {
@@ -68,6 +69,7 @@ function applyThemeToDOM(state: ThemeState) {
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<ThemeState>(DEFAULTS);
   const [mounted, setMounted] = useState(false);
+  const [lastError, setLastError] = useState<string | null>(null);
 
   useEffect(() => {
     const saved = loadTheme();
@@ -86,6 +88,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setFontSize = useCallback((fontSize: number) => {
+    if (fontSize < 10 || fontSize > 32) {
+      setLastError(`Tamaño de fuente inválido: ${fontSize}px (mínimo 10, máximo 32)`);
+      return;
+    }
     setState((prev) => {
       const next = { ...prev, fontSize };
       saveTheme(next);
@@ -95,6 +101,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setFontFamily = useCallback((fontFamily: string) => {
+    if (!fontFamily || fontFamily.trim() === "") {
+      setLastError("Familia de fuente vacía");
+      return;
+    }
     setState((prev) => {
       const next = { ...prev, fontFamily };
       saveTheme(next);
@@ -104,6 +114,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setAccentColor = useCallback((accentColor: string) => {
+    if (!accentColor || accentColor.trim() === "") {
+      setLastError("Color de acento vacío");
+      return;
+    }
     setState((prev) => {
       const next = { ...prev, accentColor };
       saveTheme(next);
@@ -112,13 +126,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
-  const applyAll = useCallback(() => {
-    applyThemeToDOM(state);
-  }, [state]);
+  const clearError = useCallback(() => setLastError(null), []);
 
   return (
     <ThemeContext.Provider
-      value={{ ...state, setDark, setFontSize, setFontFamily, setAccentColor, applyAll }}
+      value={{ ...state, setDark, setFontSize, setFontFamily, setAccentColor, lastError, clearError }}
     >
       {children}
     </ThemeContext.Provider>
