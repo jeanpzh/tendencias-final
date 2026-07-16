@@ -1,11 +1,9 @@
 import { streamText } from "ai";
 import { DEFAULT_MODEL } from "@/lib/ai/models";
 import { tools } from "@/lib/ai/tools";
-import { db } from "@/lib/db";
-import { chats, messages } from "@/lib/db/schema";
 
 export async function POST(req: Request) {
-  const { messages: incomingMessages, systemPrompt, chatId } = await req.json();
+  const { messages: incomingMessages, systemPrompt } = await req.json();
 
   const result = streamText({
     model: DEFAULT_MODEL,
@@ -15,19 +13,6 @@ export async function POST(req: Request) {
     messages: incomingMessages,
     tools,
   });
-
-  if (db && chatId) {
-    try {
-      const userMsg = incomingMessages[incomingMessages.length - 1];
-      if (userMsg) {
-        await db.insert(messages).values({
-          chatId,
-          role: userMsg.role,
-          content: typeof userMsg.content === "string" ? userMsg.content : "",
-        });
-      }
-    } catch {}
-  }
 
   return result.toUIMessageStreamResponse();
 }
