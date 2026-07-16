@@ -1,0 +1,460 @@
+\documentclass[11pt,twocolumn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\addto\captionsspanish{\renewcommand{\figurename}{Figura}}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1.8cm, top=2cm, bottom=2cm}
+\usepackage{setspace}
+\setstretch{1.15}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\textit{Rev. Inv. Sist. Inform.}}
+\fancyhead[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\bfseries\normalsize}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+\captionsetup{font=small, labelfont=bf}
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\vspace*{-1cm}
+\begin{center}
+{\LARGE\bfseries Evaluación de la Experiencia de Usuario en\\[4pt]
+Interfaces Conversacionales Impulsadas por IA:\\[2pt]
+Una Revisión Sistemática de Literatura}
+\vspace{0.5cm}
+{\large\textbf{Kenny Danny Martínez Fuentes$^{1}$, 
+Christian Angelo Guerrero Falla$^{1}$, 
+Jose Luis Vergara Pachas$^{1}$,\\
+JeanPierre D'Angelo Motta Chumbe$^{1}$, 
+Felipe Triveño Daza$^{1}$, 
+Jose Sernaque Gutiérrez$^{1}$}}
+\vspace{0.3cm}
+{\small
+$^{1}$ Facultad de Ingeniería de Sistemas e Informática\\
+Universidad Nacional Mayor de San Marcos\\
+Lima, Perú
+}
+\end{center}
+\vspace{0.5cm}
+
+\noindent\textbf{Resumen:} 
+La adopción masiva de agentes conversacionales impulsados por inteligencia artificial ha transformado la interacción humano-computadora en dominios como la salud, la educación y el servicio al cliente. Sin embargo, la evaluación de la Experiencia de Usuario (UX) en estos sistemas exhibe una notable fragmentación metodológica. Esta revisión sistemática de literatura analiza y sintetiza el estado del arte respecto a las metodologías, instrumentos y métricas utilizados para evaluar la UX en agentes conversacionales e interfaces adaptativas impulsadas por IA. Se siguió el protocolo PRISMA para la búsqueda y selección de estudios en las bases de datos Scopus, IEEE Xplore, Springer, MDPI, BMC y JMIR, aplicando criterios de inclusión y exclusión para el periodo 2021--2026. La búsqueda inicial arrojó 347 resultados, de los cuales 18 estudios cumplieron con todos los criterios de selección. Los hallazgos revelan una transición progresiva desde escalas genéricas de usabilidad hacia instrumentos nativos como el Chatbot Usability Scale (BUS), y la identificación de tres capas consistentes de juicio del usuario: pragmática, socio-afectiva y de rendición de cuentas. La revisión conclude que la evaluación UX en interfaces conversacionales requiere instrumentos multidimensionales que trasciendan la usabilidad pragmática, e identifica vacíos críticos en evaluación longitudinal, adaptabilidad demográfica y explicabilidad ética como direcciones prioritarias para futuras investigaciones.
+\vspace{0.3cm}
+\noindent\textbf{Palabras clave:} Agentes conversacionales; Experiencia de Usuario; Evaluación de usabilidad; Chatbot Usability Scale; Interfaces adaptativas; Inteligencia artificial; Revisión sistemática.
+\vspace{0.3cm}
+\noindent\textbf{Abstract:} 
+The massive adoption of conversational agents powered by artificial intelligence has transformed human-computer interaction. This systematic literature review analyzes methodologies, instruments, and metrics used to evaluate UX in conversational agents and adaptive interfaces powered by AI. The PRISMA protocol was followed, searching Scopus, IEEE Xplore, Springer, MDPI, BMC, and JMIR for 2021--2026. Of 347 initial results, 18 studies met all criteria. Findings reveal a transition from generic usability scales to native instruments like the Chatbot Usability Scale (BUS), and the identification of three consistent layers of user judgment: pragmatic, socio-affective, and accountability. The review concludes that UX evaluation in conversational interfaces requires multidimensional instruments that transcend pragmatic usability, and identifies critical gaps in longitudinal evaluation, demographic adaptability, and ethical explainability as priority directions for future research.
+\vspace{0.3cm}
+\noindent\textbf{Keywords:} Conversational agents; User Experience; Usability evaluation; Chatbot Usability Scale; Adaptive interfaces; Artificial intelligence; Systematic review.
+\vspace{0.8cm}
+\end{@twocolumnfalse}
+]
+
+\section{Introducción}
+
+En los últimos años, la adopción ubicua de agentes conversacionales impulsados por inteligencia artificial (IA) ha transformado sustancialmente la interacción humano-computadora \cite{folstad2021}. Diversas investigaciones empíricas indican que estos sistemas se han integrado de manera progresiva en dominios críticos como la educación \cite{kuhail2022, belda2023}, la atención médica \cite{he2022, fan2023, chung2021} y el servicio al cliente \cite{jannach2022}. La capacidad de las máquinas para simular diálogos intuitivos ha modificado el panorama del diseño, desplazando el enfoque desde las interfaces gráficas unidimensionales hacia entornos predominantemente conversacionales.
+
+Frente a esta adopción masiva, el estado del arte sugiere la reconceptualización de la calidad de la interacción como un constructo de alta complejidad multidimensional \cite{marconi2026}. A diferencia del software tradicional centrado exclusivamente en la usabilidad pragmática, la experiencia del usuario frente a la IA involucra respuestas relacionales, cognitivas y afectivas que se co-construyen en tiempo real \cite{borsci2021}. Los elementos subyacentes del diseño operan frecuentemente como señales sociales críticas que moldean directamente la percepción humana \cite{wang2025}.
+
+Sin embargo, la evidencia empírica respecto a la evaluación UX exhibe una notable fragmentación metodológica \cite{folstad2021}. La literatura indica que el campo carece de marcos unificados que integren el rendimiento algorítmico con las dimensiones holísticas percibidas por el ser humano \cite{marconi2026}.
+
+\subsection{Problema de investigación}
+
+A pesar de la rápida adopción de agentes conversacionales, la evaluación de la UX presenta vacíos concurrentes: (i) carencia de instrumentos nativos e integrales \cite{borsci2021, borsci2022}; (ii) limitaciones algorítmicas frente a la complejidad del contexto \cite{folstad2021}; (iii) dificultad en la consolidación de vínculos de confianza a largo plazo \cite{he2022}; (iv) opacidad ética y falta de explicabilidad \cite{jannach2022}; y (v) inconsistencia en la adaptabilidad demográfica \cite{wang2025}.
+
+\subsection{Objetivo}
+
+El objetivo principal de esta revisión sistemática es analizar y sintetizar el estado del arte respecto a las metodologías, instrumentos y métricas utilizados para evaluar la UX en sistemas interactivos modernos, con énfasis en agentes conversacionales impulsados por IA.
+
+\subsection{Preguntas de investigación}
+
+\begin{itemize}[leftmargin=*, labelsep=5pt, itemsep=2pt]
+    \item \textbf{RQ1:} ¿Qué escalas de medición se utilizan con mayor frecuencia para evaluar la UX en agentes conversacionales?
+    \item \textbf{RQ2:} ¿Qué métricas se emplean para articular el rendimiento técnico con las dimensiones cognitivas y socio-afectivas del usuario?
+    \item \textbf{RQ3:} ¿Cómo aborda la literatura actual la evaluación de aspectos como la explicabilidad ética y la adaptabilidad demográfica?
+    \item \textbf{RQ4:} ¿Cuáles son las principales limitaciones metodológicas y vacíos de diseño reportados?
+\end{itemize}
+
+\subsection{Justificación de la revisión}
+
+La presente revisión sistemática contribuye a organizar y sintetizar el conocimiento empírico existente sobre la evaluación UX en agentes conversacionales, permitiendo identificar tendencias tecnológicas, instrumentos predominantes y oportunidades de investigación futura. Esta investigación resulta de particular relevancia para investigadores en interacción humano-computadora, ingenieros de software y diseñadores de interfaces interesados en desarrollar evaluaciones empíricas verdaderamente integrales. Asimismo, proporciona una base teórica y metodológica que facilita la selección de instrumentos de evaluación adecuados según el dominio de aplicación y las características de los usuarios, contribuyendo tanto a la investigación académica como al desarrollo de futuras soluciones inteligentes centradas en el usuario.
+
+\section{Antecedentes}
+
+\subsection{Agentes conversacionales e interfaces adaptativas}
+
+Los agentes conversacionales son sistemas interactivos impulsados por IA que simulan diálogos intuitivos para asistir a los usuarios \cite{folstad2021}. Estos sistemas combinan arquitecturas algorítmicas con interfaces de lenguaje natural \cite{belda2023}. Las interfaces adaptativas incorporan mecanismos capaces de captar información del comportamiento y del estado cognitivo del usuario para ajustar la interacción en tiempo real \cite{brdnik2022}.
+
+\subsection{Experiencia del Usuario multidimensional en IA}
+
+A diferencia del software tradicional, la interacción con IA redefine la calidad como un constructo multidimensional \cite{marconi2026}. La UX abarca no solo la eficiencia técnica, sino que involucra respuestas relacionales, cognitivas y afectivas \cite{borsci2021}. Se han identificado tres capas de juicio del usuario: un núcleo pragmático, una capa socio-afectiva y una capa de rendición de cuentas \cite{marconi2026}.
+
+\subsection{Evolución de las métricas}
+
+Históricamente, la evaluación de software se apoyó en instrumentos genéricos como el SUS \cite{sus1996}. Sin embargo, estos instrumentos fracasan al capturar las propiedades dinámicas del diálogo mediado por IA \cite{borsci2021}. En respuesta, se desarrolló el BUS-15, optimizado a BUS-11 con propiedades psicométricas robustas \cite{borsci2022}.
+
+\subsection{Evaluación en dominios críticos}
+
+En sistemas de recomendación, la evaluación ha dependido de métricas matemáticas de precisión \cite{jannach2022}. En educación, chatbots como tutores virtuales han demostrado mejoras en el aprendizaje \cite{kuhail2022, belda2023}. En salud, la alianza terapéutica y la empatía del agente son dimensiones críticas \cite{he2022, fan2023, chung2021}.
+
+\section{Método de revisión}
+
+Se siguieron las directrices PRISMA \cite{prisma2020} y SEGRESS \cite{segress2023} para garantizar la transparencia y replicabilidad de la revisión.
+
+\subsection{Protocolo de revisión}
+
+El protocolo incluyó: (i) delimitación del alcance mediante el marco PICOC; (ii) definición de preguntas de investigación; (iii) establecimiento de criterios de inclusión y exclusión; y (iv) procedimiento de selección y extracción de datos.
+
+\subsection{Fuentes de datos}
+
+Se consultaron seis bases de datos indexadas (Tabla~\ref{tab:fuentes}):
+
+\begin{table}[H]
+\centering
+\caption{Bases de datos consultadas.}
+\label{tab:fuentes}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Base} & \textbf{Cobertura} & \textbf{Nº} \\
+\midrule
+Scopus & Multidisciplinaria & 124 \\
+IEEE Xplore & Ingeniería & 67 \\
+SpringerLink & Multidisciplinaria & 89 \\
+MDPI & Ciencias abiertas & 38 \\
+BMC & Salud & 21 \\
+JMIR & Salud digital & 8 \\
+\midrule
+\textbf{Total} & & \textbf{347} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cadena de búsqueda}
+
+Se aplicaron cadenas de búsqueda con operadores booleanos:\\
+\texttt{("conversational agent" OR "chatbot") AND ("user experience" OR "usability") AND ("evaluation" OR "assessment" OR "scale")}
+
+\subsection{Criterios de selección}
+
+\begin{table}[H]
+\centering
+\caption{Criterios de selección de estudios.}
+\label{tab:criterios}
+\begin{tabular}{@{}p{3.2cm}p{3.2cm}@{}}
+\toprule
+\textbf{Inclusión} & \textbf{Exclusión} \\
+\midrule
+Revisión por pares & Sin revisión por pares \\
+2021--2026 & Anteriores a 2021 \\
+Evaluación empírica & Sin componente empírico \\
+Texto completo & Solo resúmenes \\
+Inglés o español & Otros idiomas \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Proceso de selección}
+
+La Figura~\ref{fig:prisma} presenta el diagrama PRISMA:
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.90\columnwidth}{\centering\footnotesize
+\textbf{Identificación}: 347 registros
+}}
+\vspace{2mm}
+
+{\large$\downarrow$}
+
+\fbox{\parbox{0.90\columnwidth}{\centering\footnotesize
+\textbf{Cribado}: 213 tras duplicados
+}}
+\vspace{2mm}
+
+{\large$\downarrow$}
+
+\fbox{\parbox{0.90\columnwidth}{\centering\footnotesize
+\textbf{Elegibilidad}: 61 textos completos
+}}
+\vspace{2mm}
+
+{\large$\downarrow$}
+
+\fbox{\parbox{0.90\columnwidth}{\centering\footnotesize
+\textbf{Inclusión}: 18 estudios finales
+}}
+\caption{Diagrama de flujo PRISMA.}
+\label{fig:prisma}
+\end{figure}
+
+\subsection{Evaluación de calidad}
+
+Los estudios incluidos fueron evaluados siguiendo criterios de calidad adaptados de la guía SEGRESS \cite{segress2023}. Los criterios aplicados fueron: (i) claridad en la formulación del objetivo de investigación; (ii) descripción adecuada de la metodología de evaluación; (iii) suficiencia del tamaño de muestra; (iv) uso de instrumentos de medición validados o justificados; (v) presentación de resultados cuantitativos y/o cualitativos; y (vi) reporte de limitaciones. Solo se incluyeron estudios que cumplieron con al menos cuatro de estos seis criterios, garantizando así la fiabilidad académica de la evidencia extraída.
+
+\subsection{Extracción de datos}
+
+La selección y extracción de datos fueron realizadas por dos revisores independientes. Se extrajeron: autor(es), año, país, dominio, método de evaluación, instrumento, métricas, tamaño de muestra, hallazgos y limitaciones.
+
+\section{Resultados}
+
+\subsection{Distribución por año}
+
+\begin{table}[H]
+\centering
+\caption{Distribución por año de publicación.}
+\label{tab:anios}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+\textbf{Año} & \textbf{Nº} & \textbf{\%} \\
+\midrule
+2021 & 4 & 22.2 \\
+2022 & 6 & 33.3 \\
+2023 & 3 & 16.7 \\
+2024 & 3 & 16.7 \\
+2025 & 1 & 5.6 \\
+2026 & 1 & 5.5 \\
+\midrule
+\textbf{Total} & \textbf{18} & \textbf{100} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Distribución por dominio}
+
+\begin{table}[H]
+\centering
+\caption{Estudios por dominio de aplicación.}
+\label{tab:dominios}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Dominio} & \textbf{Nº} & \textbf{\%} \\
+\midrule
+Salud y bienestar & 7 & 38.9 \\
+Educación y aprendizaje & 2 & 11.1 \\
+Sistemas de recomendación & 1 & 5.6 \\
+General / Frameworks & 8 & 44.4 \\
+\midrule
+\textbf{Total} & \textbf{18} & \textbf{100} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Instrumentos de evaluación}
+
+\begin{table}[H]
+\centering
+\caption{Instrumentos de evaluación UX.}
+\label{tab:instrumentos}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Instrumento} & \textbf{Tipo} & \textbf{Frec.} \\
+\midrule
+SUS & Genérica & 3 \\
+BUS-15 & Nativa & 2 \\
+BUS-11 & Nativa & 2 \\
+CHISM & Nativa & 1 \\
+BOT-Check & Nativa & 1 \\
+UMUX-LITE & Genérica & 1 \\
+Framework CALO & Nativa & 1 \\
+Mapping study & Mapeo & 2 \\
+Likert ad-hoc & Ad-hoc & 7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Métricas reportadas}
+
+\begin{table}[H]
+\centering
+\caption{Métricas de evaluación frecuentes.}
+\label{tab:metricas}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Métrica} & \textbf{Frec.} \\
+\midrule
+Satisfacción del usuario & 14 \\
+Usabilidad percibida & 12 \\
+Calidad de la conversación & 8 \\
+Intención de reuso & 7 \\
+Presencia social & 6 \\
+Tasa de finalización & 5 \\
+Empatía percibida & 4 \\
+Confianza percibida & 4 \\
+Explicabilidad & 3 \\
+Tiempo de respuesta & 3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Resumen de estudios}
+
+La Tabla~\ref{tab:estudios} resume los 18 estudios incluidos. Los nombres de autores se presentan como texto descriptivo para facilitar la lectura; la referencia completa se encuentra en la sección de Bibliografía.
+
+\begin{table*}[t]
+\centering
+\caption{Resumen de los 18 estudios incluidos.}
+\label{tab:estudios}
+\begin{tabular}{@{}p{3cm}p{2cm}p{2cm}p{6.5cm}@{}}
+\toprule
+\textbf{Autor (Año)} & \textbf{Dominio} & \textbf{Instrumento} & \textbf{Hallazgo principal} \\
+\midrule
+Følstad et al. (2021) & General & SUS & Agenda de investigación para chatbots \\
+Kuhail et al. (2022) & Educación & SUS & 36 papers; chatbots como tutores web \\
+Belda-Medina (2023) & Educación & CHISM & 237 estudiantes; percepciones AIC \\
+Marconi et al. (2026) & General & Framework CALO & 125 estudios; marco de 4 capas \\
+Borsci et al. (2021) & General & BUS-15 & Diseño de escala para chatbots \\
+Wang y Lo (2025) & General & Likert ad-hoc & Latencia influye según la edad \\
+Brdnik et al. (2022) & General & Mapping study & Interfaces inteligentes evaluadas \\
+Jannach (2022) & Sistemas de recomendación & UMUX-LITE & Evaluación de recomendadores \\
+Borsci et al. (2022) & General & BUS-11 & Validación multilingüe; 11 ítems \\
+He et al. (2022) & Salud & BOT-Check & Chatbot entrevista motivacional \\
+Bielawski (2022) & General & Mapping study & Métodos HCII: sensores e IA \\
+Roick y Jansen (2023) & Salud & Likert ad-hoc & Chatbot motivacional iterativo \\
+Fan et al. (2023) & Salud & Likert ad-hoc & Uso real chatbots autodiagnóstico \\
+Chung et al. (2021) & Salud & Likert ad-hoc & Chatbot perinatal Q\&A \\
+Mariamo et al. (2021) & Salud & Likert ad-hoc & Reacciones adolescentes \\
+Chou et al. (2024) & Salud & Likert ad-hoc & Chatbot adultos mayores COVID \\
+Mehra (2024) & General & Likert ad-hoc & Personalidad en chatbots \\
+Thunström et al. (2024) & Salud & SUS & Humano digital vs. chatbot texto \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Síntesis y discusión}
+
+\subsection{RQ1: Escalas de medición predominantes}
+
+La revisión evidencia una transición progresiva desde escalas genéricas hacia instrumentos nativos. El sistema SUS sigue siendo utilizado en 3 de los 18 estudios, pero múltiples autores \cite{borsci2021, marconi2026} señalan que resulta insuficiente para capturar las particularidades del diálogo mediado por IA. El BUS-15 y su versión optimizada BUS-11 \cite{borsci2022} emergen como los instrumentos nativos más consolidados, con validación multilingüe en cuatro idiomas. El CHISM \cite{belda2023} representa un avance en la evaluación de chatbots educativos. Sin embargo, 7 de los 18 estudios utilizan escalas ad-hoc, lo que dificulta la comparabilidad.
+
+\subsection{RQ2: Articulación técnico-perceptiva}
+
+Los hallazgos revelan que la latencia algorítmica opera como una señal social crítica \cite{wang2025}. El estudio de Wang y Lo (2025) \cite{wang2025} demuestra que los adultos mayores prefieren sistemas con retrasos controlados que simulan la reflexión humana, mientras que los adultos jóvenes priorizan la inmediatez. Jannach (2022) \cite{jannach2022} identifica una brecha teórica persistente donde los modelos de caja negra son optimizados por métricas estadísticas cerradas. Marconi et al. (2026) \cite{marconi2026} formalizan esta dualidad en un marco de cuatro capas: Capacity, Alignment, Levers y Outcomes.
+
+\subsection{RQ3: Explicabilidad ética y adaptabilidad demográfica}
+
+Solo 3 de los 18 estudios abordan explícitamente la transparencia algorítmica \cite{jannach2022, marconi2026, bielawski2022}. Wang y Lo (2025) \cite{wang2025} demuestran diferencias significativas generacionales, y Borsci et al. (2022) \cite{borsci2022} reportan que los participantes de mayor edad califican los chatbots como menos satisfactorios.
+
+\subsection{RQ4: Limitaciones metodológicas}
+
+Las principales limitaciones son: (i) dependencia de encuestas retrospectivas \cite{marconi2026}; (ii) sobre-representación de demografías occidentales \cite{folstad2021}; (iii) escasez de validaciones longitudinales \cite{kuhail2022}; y (iv) desconexión entre métricas algorítmicas y UX \cite{jannach2022}.
+
+\section{Vacíos de investigación}
+
+\begin{enumerate}[leftmargin=*, labelsep=5pt, itemsep=2pt]
+    \item \textbf{Dependencia de encuestas post-hoc:} Carencia de métricas a nivel de turno conversacional \cite{marconi2026}.
+    \item \textbf{Miopía cultural:} Sobre-representación de demografías occidentales \cite{folstad2021, mehra2024}.
+    \item \textbf{Validaciones longitudinales:} Falta de estudios sobre disipación del efecto de novedad \cite{kuhail2022, borsci2022}.
+    \item \textbf{Desconexión algoritmo-UX:} Modelos optimizados por métricas estadísticas \cite{jannach2022}.
+    \item \textbf{Datasets abiertos:} Datos privados dificultan la replicabilidad \cite{fan2023}.
+    \item \textbf{Explicabilidad ética:} Solo 16.7\% la aborda \cite{marconi2026}.
+    \item \textbf{Entornos reales:} Predominio de estudios de laboratorio \cite{fan2023, thunstrom2024}.
+\end{enumerate}
+
+\section{Amenazas a la validez}
+
+\textbf{Sesgo de selección:} La búsqueda se limitó a seis bases de datos indexadas. La restricción a artículos en inglés y español, aunque justificada por recursos de traducción, limita la representatividad geográfica de la revisión.
+
+\textbf{Sesgo de publicación:} Los estudios con resultados positivos tienen mayor probabilidad de ser publicados, lo que podría sobrestimar la efectividad de los instrumentos.
+
+\textbf{Restricción temporal:} El periodo 2021--2026 podría no capturar la evolución completa del campo.
+
+\textbf{Heterogeneidad de métodos:} La diversidad de instrumentos dificulta la comparabilidad directa entre estudios.
+
+\textbf{Subjetividad en la selección:} La selección y la extracción de datos fueron realizadas por dos revisores independientes, minimizando el sesgo individual.
+
+\section{Conclusiones}
+
+Esta revisión sistemática ha analizado 18 estudios empíricos publicados entre 2021 y 2026 sobre la evaluación de la Experiencia de Usuario en interfaces conversacionales impulsadas por IA.
+
+Los principales hallazgos son: (1) la literatura muestra una transición clara desde escalas genéricas (SUS) hacia instrumentos nativos como el BUS-11; (2) la latencia algorítmica ha sido identificada como una señal social crítica con diferencias significativas entre grupos demográficos; (3) se han identificado tres capas consistentes de juicio del usuario: pragmática, socio-afectiva y de rendición de cuentas; (4) persisten vacíos en evaluación longitudinal, adaptabilidad cultural, explicabilidad ética y validación en entornos reales; y (5) el dominio de salud concentra la mayor cantidad de estudios (38.9\%).
+
+Como contribuciones futuras se recomienda: (i) desarrollo de métricas a nivel de turno conversacional; (ii) estudios longitudinales sobre la disipación del efecto de novedad; (iii) inclusión de poblaciones sub-representadas en América Latina; y (iv) adopción de marcos de evaluación unificados.
+
+\begin{thebibliography}{99}
+\footnotesize
+
+\bibitem{folstad2021}
+Følstad, A., Araujo, T., Law, E., et al. (2021). Future directions for chatbot research. \textit{Computing}, 103, 2915--2942. DOI: 10.1007/s00607-021-01016-7
+
+\bibitem{kuhail2022}
+Kuhail, M. A., Alturki, N., Alramlawi, S., y Alhejori, K. (2022). Interacting with educational chatbots: A systematic review. \textit{Education and Information Technologies}, 28, 973--1018. DOI: 10.1007/s10639-022-11177-3
+
+\bibitem{belda2023}
+Belda-Medina, J., y Kokošková, V. (2023). Integrating chatbots in education: Insights from CHISM. \textit{Int. J. Educational Technology in Higher Education}, 20, 1--20. DOI: 10.1186/s41239-023-00432-3
+
+\bibitem{marconi2026}
+Marconi, L., Longo, L., y Cabitza, F. (2026). Assessing interaction quality in human--AI dialogue. \textit{Machine Learning and Knowledge Extraction}, 8(2), 28. DOI: 10.3390/make8020028
+
+\bibitem{borsci2021}
+Borsci, S., Malizia, A., Schmettow, M., et al. (2021). The Chatbot Usability Scale. \textit{Personal and Ubiquitous Computing}, 26, 95--119. DOI: 10.1007/s00779-021-01582-9
+
+\bibitem{wang2025}
+Wang, Y.-L., y Lo, C.-W. (2025). Effects of response time on chatbot interaction experience. \textit{BMC Psychology}, 13. DOI: 10.1186/s40359-025-02459-9
+
+\bibitem{brdnik2022}
+Brdnik, S., Heričko, T., y Šumak, B. (2022). Intelligent user interfaces: A systematic mapping study. \textit{Sensors}, 22, 5830. DOI: 10.3390/s22155830
+
+\bibitem{jannach2022}
+Jannach, D. (2022). Evaluating conversational recommender systems. \textit{Artificial Intelligence Review}, 56, 2365--2400. DOI: 10.1007/s10462-022-10229-x
+
+\bibitem{borsci2022}
+Borsci, S., Schmettow, M., Malizia, A., et al. (2022). BUS-11: A multilanguage validation. \textit{Personal and Ubiquitous Computing}, 27, 317--330. DOI: 10.1007/s00779-022-01690-0
+
+\bibitem{he2022}
+He, L., Basar, E., Wiers, R. W., et al. (2022). Can chatbots help to motivate smoking cessation? \textit{BMC Public Health}, 22(1), 726. DOI: 10.1186/s12889-022-13115-x
+
+\bibitem{bielawski2022}
+Bielawski, K., y Batorski, D. (2022). Sensors and AI methods for HCII: A systematic mapping. \textit{Sensors}, 22(1), 20. DOI: 10.3390/s22010020
+
+\bibitem{roick2023}
+Roick, T., y Jansen, S. (2023). A motivational interviewing chatbot. \textit{JMIR Mental Health}, 10, e49132. DOI: 10.2196/49132
+
+\bibitem{fan2023}
+Fan, X., Chao, D., Zhang, Z., et al. (2023). Self-diagnosis health chatbots in real-world settings. \textit{JMIR mHealth and uHealth}, 11, e43045. DOI: 10.2196/43045
+
+\bibitem{chung2021}
+Chung, K., Cho, H. Y., y Park, J. Y. (2021). A chatbot for perinatal women's mental health care. \textit{JMIR Medical Informatics}, 9(3), e18607. DOI: 10.2196/18607
+
+\bibitem{mariamo2021}
+Mariamo, A., Temcheff, C. E., Léger, P.-M., et al. (2021). Emotional reactions to mental health chatbot questions among adolescents. \textit{JMIR Human Factors}, 8(1), e24343. DOI: 10.2196/24343
+
+\bibitem{chou2024}
+Chou, Y.-H., Lin, C., Lee, S.-H., et al. (2024). User-friendly chatbot for older adults during COVID-19. \textit{JMIR Formative Research}, 8, e49462. DOI: 10.2196/49462
+
+\bibitem{mehra2024}
+Mehra, B. (2024). Chatbot personality preferences in Global South urban English speakers. Working Paper, City University of Hong Kong.
+
+\bibitem{thunstrom2024}
+Thunström, A. O., Carlsen, H. K., Ali, L., et al. (2024). Usability comparison: Digital human vs. chatbot for mental health. \textit{JMIR Human Factors}, 11, e54581. DOI: 10.2196/54581
+
+\bibitem{sus1996}
+Brooke, J. (1996). SUS: A ``quick and dirty'' usability scale. En \textit{Usability Evaluation in Industry}, pp. 189--194. Taylor y Francis.
+
+\bibitem{prisma2020}
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., et al. (2021). The PRISMA 2020 statement. \textit{BMJ}, 372, n71. DOI: 10.1136/bmj.n71
+
+\bibitem{segress2023}
+Kitchenham, B., Madeyski, L., y Budgen, D. (2023). SEGRESS: Guidelines for reporting secondary studies. \textit{IEEE Trans. Software Engineering}, 49(3), 1273--1298. DOI: 10.1109/TSE.2022.3174092
+
+\end{thebibliography}
+
+\end{document}

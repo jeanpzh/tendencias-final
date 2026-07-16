@@ -1,0 +1,353 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Ir al contenido principal" [ref=e2] [cursor=pointer]
+      - link "Ayuda sobre la accesibilidad" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=es-PE
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - generic:
+          - generic:
+            - generic:
+              - img
+        - 'link "Copa Mundial 2026: El arte de la chilena" [ref=e13] [cursor=pointer]':
+          - /url: https://www.google.com/webhp?hl=es&ictx=2&sa=X&ved=0ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQPQgK
+          - 'img "Copa Mundial 2026: El arte de la chilena" [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - combobox "Buscar" [ref=e19]: unmsm facultad ingenieria sistemas revista formato articulo latex ojs unmsm facultad ingenieria sistemas revista formato articulo latex ojs
+            - generic [ref=e20]:
+              - button "Borrar" [ref=e22] [cursor=pointer]:
+                - img [ref=e24]
+              - generic [ref=e27]:
+                - button "Búsqueda por voz" [ref=e28] [cursor=pointer]:
+                  - img [ref=e29]
+                - button "Búsqueda por imagen" [ref=e31] [cursor=pointer]:
+                  - img [ref=e32]
+          - button "Buscar" [ref=e34] [cursor=pointer]:
+            - img [ref=e37]
+    - generic [ref=e39]:
+      - button "Configuración" [ref=e41] [cursor=pointer]:
+        - img [ref=e44]
+      - button "Compartir" [ref=e47] [cursor=pointer]:
+        - img [ref=e51]
+      - generic [ref=e53]:
+        - button "Aplicaciones de Google" [ref=e55] [cursor=pointer]:
+          - img [ref=e56]
+        - link "Iniciar sesión" [ref=e60] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=es&passive=true&continue=https://www.google.com/search%3Fq%3Dunmsm%2Bfacultad%2Bingenieria%2Bsistemas%2Brevista%2Bformato%2Barticulo%2Blatex%2Bojs&ec=futura_srp_og_si_72236_p
+  - generic [ref=e62]:
+    - navigation [ref=e68]:
+      - generic [ref=e74]:
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "Modo IA" [ref=e79] [cursor=pointer]:
+              - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&udm=50&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&aep=1&ntc=1&cs=0&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ2J8OegQIDRAD
+              - generic [ref=e82]: Modo IA
+          - listitem [ref=e83]:
+            - link "Todo" [disabled] [ref=e84]:
+              - generic [ref=e86]: Todo
+          - listitem [ref=e87]:
+            - link "Imágenes" [ref=e88] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&udm=2&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQtKgLegQIMRAB
+              - generic [ref=e90]: Imágenes
+          - listitem [ref=e91]:
+            - link "Vídeos" [ref=e92] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&udm=7&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQtKgLegQILxAB
+              - generic [ref=e94]: Vídeos
+          - listitem [ref=e95]:
+            - link "Vídeos cortos" [ref=e96] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&udm=39&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQs6gLegQIFhAB
+              - generic [ref=e98]: Vídeos cortos
+          - listitem [ref=e99]:
+            - link "Noticias" [ref=e100] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&tbm=nws&source=lnms&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ0pQJegQIMBAB
+              - generic [ref=e102]: Noticias
+          - listitem [ref=e103]:
+            - link "Libros" [ref=e104] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&udm=36&source=lnms&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ0pQJegQIKRAB
+              - generic [ref=e106]: Libros
+          - listitem [ref=e107]:
+            - button "Más filtros" [ref=e108] [cursor=pointer]:
+              - generic "Más filtros" [ref=e109]:
+                - generic [ref=e110]:
+                  - generic [ref=e111]: Más
+                  - img [ref=e113]
+        - button "Herramientas" [ref=e116] [cursor=pointer]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: Herramientas
+            - img [ref=e121]
+    - heading "Resultados de búsqueda" [level=1] [ref=e123]
+    - main [ref=e129]:
+      - generic [ref=e133]:
+        - generic [ref=e136]:
+          - heading "Resultados web" [level=2] [ref=e137]
+          - generic [ref=e138]:
+            - generic [ref=e141]:
+              - link "FORMATO-ARTICULO.doc fisi unmsm https://sistemas.unmsm.edu.pe › images › revista" [ref=e143] [cursor=pointer]:
+                - /url: https://sistemas.unmsm.edu.pe/site/images/investigacion/revista/FORMATO-ARTICULO.doc
+                - heading "FORMATO-ARTICULO.doc" [level=3] [ref=e144]
+                - generic [ref=e150]:
+                  - generic [ref=e152]: fisi unmsm
+                  - generic [ref=e154]: https://sistemas.unmsm.edu.pe › images › revista
+              - generic [ref=e155]:
+                - generic:
+                  - generic: DOC
+              - button "Acerca de este resultado" [ref=e158] [cursor=pointer]:
+                - img [ref=e161]
+            - generic [ref=e165]:
+              - emphasis [ref=e166]: Plantilla para la Presentación en la Revista Peruana de Computación y Sistemas
+              - text: . Titulo. Title. Primer Autor 1, Segundo Autor 2*, Tercer Autor 3. 1 Primer ...
+            - generic [ref=e168]: "Falta(n): latex ‎ojs"
+        - generic [ref=e179]:
+          - heading "Buscando Pensando un poco más" [level=2] [ref=e183]:
+            - generic [ref=e184]:
+              - generic [ref=e186]: Buscando
+              - generic [ref=e188]: Pensando un poco más
+          - progressbar "Generando" [ref=e190]
+        - generic [ref=e243]:
+          - heading "Resultados web" [level=2] [ref=e244]
+          - generic [ref=e245]:
+            - generic [ref=e248]:
+              - link "Revista de investigación de Sistemas e Informática Revistas de investigación UNMSM https://revistasinvestigacion.unmsm.edu.pe › sistem" [ref=e250] [cursor=pointer]:
+                - /url: https://revistasinvestigacion.unmsm.edu.pe/index.php/sistem
+                - heading "Revista de investigación de Sistemas e Informática" [level=3] [ref=e251]
+                - generic [ref=e257]:
+                  - generic [ref=e259]: Revistas de investigación UNMSM
+                  - generic [ref=e261]: https://revistasinvestigacion.unmsm.edu.pe › sistem
+              - button "Acerca de este resultado" [ref=e264] [cursor=pointer]:
+                - img [ref=e267]
+            - generic [ref=e270]:
+              - generic [ref=e271]: 31 dic. 2025 —
+              - generic [ref=e272]:
+                - text: "Es de publicación semestral en: junio y diciembre. Acreditada por el Fondo Editorial de la"
+                - emphasis [ref=e273]: UNMSM
+                - text: . Número actual. Vol. 18 Núm. 2 (2025).
+            - generic [ref=e275]: "Falta(n): formato ‎latex ‎ojs"
+        - generic [ref=e279]:
+          - generic [ref=e282]:
+            - link "Plantilla del artículo fisi unmsm https://sistemas.unmsm.edu.pe › images › pdf" [ref=e284] [cursor=pointer]:
+              - /url: https://sistemas.unmsm.edu.pe/site/images/pdf/PLANTILLA_ARTICULO__RPCS.doc
+              - heading "Plantilla del artículo" [level=3] [ref=e285]
+              - generic [ref=e291]:
+                - generic [ref=e293]: fisi unmsm
+                - generic [ref=e295]: https://sistemas.unmsm.edu.pe › images › pdf
+            - generic [ref=e296]:
+              - generic:
+                - generic: DOC
+            - button "Acerca de este resultado" [ref=e299] [cursor=pointer]:
+              - img [ref=e302]
+          - generic [ref=e306]:
+            - text: ...
+            - emphasis [ref=e307]: Sistema
+            - text: ": Open Journal System ("
+            - emphasis [ref=e308]: OJS
+            - text: ") que accede por el link: https://revistasinvestigacion."
+            - emphasis [ref=e309]: unmsm
+            - text: .edu.pe/index.php/rpcsis/about/submissions. Si no tiene un ...
+          - generic [ref=e311]:
+            - text: "Falta(n): latex ‎| Realizar una búsqueda con lo siguiente:"
+            - link "latex" [ref=e312] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+%22latex%22+ojs&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ5t4CegQIGhAB
+        - generic [ref=e316]:
+          - generic [ref=e319]:
+            - link "Revista Peruana de Computación y Sistemas Universidad Nacional Mayor de San Marcos https://sistemas.unmsm.edu.pe › site › invest-rpcs" [ref=e321] [cursor=pointer]:
+              - /url: https://sistemas.unmsm.edu.pe/site/investigacion/publicaciones-y-revistas/invest-rpcs
+              - heading "Revista Peruana de Computación y Sistemas" [level=3] [ref=e322]
+              - generic [ref=e328]:
+                - generic [ref=e330]: Universidad Nacional Mayor de San Marcos
+                - generic [ref=e332]: https://sistemas.unmsm.edu.pe › site › invest-rpcs
+            - button "Acerca de este resultado" [ref=e335] [cursor=pointer]:
+              - img [ref=e338]
+          - generic [ref=e342]:
+            - emphasis [ref=e343]: La Revista Peruana de Computación y Sistemas
+            - text: (RPCS) es una publicación científica editada por el Instituto de Investigación de la Facultad de Ingeniería de ...
+          - generic [ref=e345]: "Falta(n): latex ‎ojs"
+        - generic [ref=e349]:
+          - generic [ref=e352]:
+            - link "Plantilla del artículo fisi unmsm https://sistemas.unmsm.edu.pe › images › revista" [ref=e354] [cursor=pointer]:
+              - /url: https://sistemas.unmsm.edu.pe/site/images/investigacion/revista/PLANTILLA-ARTICULO_REVISTA_RPCS_V3.doc
+              - heading "Plantilla del artículo" [level=3] [ref=e355]
+              - generic [ref=e361]:
+                - generic [ref=e363]: fisi unmsm
+                - generic [ref=e365]: https://sistemas.unmsm.edu.pe › images › revista
+            - generic [ref=e366]:
+              - generic:
+                - generic: DOC
+            - button "Acerca de este resultado" [ref=e369] [cursor=pointer]:
+              - img [ref=e372]
+          - generic [ref=e376]:
+            - emphasis [ref=e377]: Plantilla para la Presentación de artículos en la Revista Peruana de Computación y Sistemas
+            - text: "... (OJS) que accede por el link: https://revistasinvestigacion ..."
+          - generic [ref=e379]: "Falta(n): ingenieria ‎latex"
+        - generic [ref=e383]:
+          - generic [ref=e386]:
+            - link "Envíos | Revista peruana de computación y sistemas Revistas de investigación UNMSM https://revistasinvestigacion.unmsm.edu.pe › submissions" [ref=e388] [cursor=pointer]:
+              - /url: https://revistasinvestigacion.unmsm.edu.pe/index.php/rpcsis/about/submissions
+              - heading "Envíos | Revista peruana de computación y sistemas" [level=3] [ref=e389]
+              - generic [ref=e395]:
+                - generic [ref=e397]: Revistas de investigación UNMSM
+                - generic [ref=e399]: https://revistasinvestigacion.unmsm.edu.pe › submissions
+            - button "Acerca de este resultado" [ref=e402] [cursor=pointer]:
+              - img [ref=e405]
+          - generic [ref=e409]:
+            - text: La RPCS es una
+            - emphasis [ref=e410]: revista
+            - text: arbitrada, con evaluadores externos (peer review) a la
+            - emphasis [ref=e411]: UNMSM
+            - text: ", se publica en forma semestral en: junio y diciembre, en forma digital, en ..."
+          - generic [ref=e413]: "Falta(n): latex ‎ojs"
+        - generic [ref=e417]:
+          - generic [ref=e420]:
+            - link "Envíos | Revista de investigación de Sistemas e Informática Revistas de investigación UNMSM https://revistasinvestigacion.unmsm.edu.pe › submissions" [ref=e422] [cursor=pointer]:
+              - /url: https://revistasinvestigacion.unmsm.edu.pe/index.php/sistem/about/submissions
+              - heading "Envíos | Revista de investigación de Sistemas e Informática" [level=3] [ref=e423]
+              - generic [ref=e429]:
+                - generic [ref=e431]: Revistas de investigación UNMSM
+                - generic [ref=e433]: https://revistasinvestigacion.unmsm.edu.pe › submissions
+            - button "Acerca de este resultado" [ref=e436] [cursor=pointer]:
+              - img [ref=e439]
+          - generic [ref=e443]:
+            - text: El
+            - emphasis [ref=e444]: formato
+            - text: obligatorio es a una columna en español, utilizando Microsoft Word (o compatible), en
+            - emphasis [ref=e445]: formato
+            - text: A4, con márgenes de 25 mm, a doble espacio (con ...
+          - generic [ref=e447]: "Falta(n): latex ‎ojs"
+        - generic [ref=e451]:
+          - generic [ref=e454]:
+            - link "Acerca de Open Journal Systems Revistas de investigación UNMSM https://revistasinvestigacion.unmsm.edu.pe › sistem › about" [ref=e456] [cursor=pointer]:
+              - /url: https://revistasinvestigacion.unmsm.edu.pe/index.php/sistem/about/aboutThisPublishingSystem
+              - heading "Acerca de Open Journal Systems" [level=3] [ref=e457]
+              - generic [ref=e463]:
+                - generic [ref=e465]: Revistas de investigación UNMSM
+                - generic [ref=e467]: https://revistasinvestigacion.unmsm.edu.pe › sistem › about
+            - button "Acerca de este resultado" [ref=e470] [cursor=pointer]:
+              - img [ref=e473]
+          - generic [ref=e477]:
+            - text: Esta
+            - emphasis [ref=e478]: revista
+            - text: utiliza Open Journal Systems 3.4.0.10, que es un software de gestión de
+            - emphasis [ref=e479]: revistas
+            - text: de código abierto desarrollado, impulsado y distribuido de forma ...
+          - generic [ref=e481]: "Falta(n): formato ‎articulo ‎latex ‎ojs"
+        - generic [ref=e485]:
+          - generic [ref=e488]:
+            - link "Plantilla en Word para redacción de artículos científicos. ... Facebook · Metodología de Investigación- Tesis Más de 850 reacciones · hace 2 años" [ref=e490] [cursor=pointer]:
+              - /url: https://www.facebook.com/metodinvestigaciontesis/posts/plantilla-en-word-para-redacci%C3%B3n-de-art%C3%ADculos-cient%C3%ADficos/871095295062421/
+              - heading "Plantilla en Word para redacción de artículos científicos. ..." [level=3] [ref=e491]
+              - generic [ref=e497]:
+                - generic [ref=e499]: Facebook · Metodología de Investigación- Tesis
+                - generic [ref=e501]: Más de 850 reacciones · hace 2 años
+            - button "Acerca de este resultado" [ref=e504] [cursor=pointer]:
+              - img [ref=e507]
+          - generic [ref=e511]:
+            - text: Con el permiso del administrador les comparto plantilla de
+            - emphasis [ref=e512]: LaTeX
+            - text: para realizar artículos y libros de ciencias. Para más contenido de
+            - emphasis [ref=e513]: LaTeX
+            - text: ...
+      - generic [ref=e515]:
+        - generic [ref=e520]:
+          - heading "También se buscó" [level=2] [ref=e522]
+          - generic [ref=e524]:
+            - generic [ref=e525]:
+              - link "Revista peruana de computación y sistemas" [ref=e529] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Revista+peruana+de+computaci%C3%B3n+y+sistemas&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAhAEAE
+                - generic [ref=e530]:
+                  - generic [ref=e534]: Revista peruana de computación y sistemas
+                  - img [ref=e538]
+              - link "Artículo científico UNMSM pdf" [ref=e543] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Art%C3%ADculo+cient%C3%ADfico+UNMSM+pdf&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAhFEAE
+                - generic [ref=e544]:
+                  - generic [ref=e548]: Artículo científico UNMSM pdf
+                  - img [ref=e552]
+              - link "Ing de sistemas unmsm" [ref=e557] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Ing+de+sistemas+unmsm&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAhEEAE
+                - generic [ref=e558]:
+                  - generic [ref=e562]: Ing de sistemas unmsm
+                  - img [ref=e566]
+              - link "Risi unmsm" [ref=e571] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Risi+unmsm&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAg-EAE
+                - generic [ref=e572]:
+                  - generic [ref=e576]: Risi unmsm
+                  - img [ref=e580]
+            - generic [ref=e582]:
+              - link "Revistas UNMSM" [ref=e586] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Revistas+UNMSM&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAhCEAE
+                - generic [ref=e587]:
+                  - generic [ref=e591]: Revistas UNMSM
+                  - img [ref=e595]
+              - link "Revista Científica de Sistemas e Informática" [ref=e600] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Revista+Cient%C3%ADfica+de+Sistemas+e+Inform%C3%A1tica&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAhDEAE
+                - generic [ref=e601]:
+                  - generic [ref=e605]: Revista Científica de Sistemas e Informática
+                  - img [ref=e609]
+              - link "Cybertesis FISI UNMSM" [ref=e614] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Cybertesis+FISI+UNMSM&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAg_EAE
+                - generic [ref=e615]:
+                  - generic [ref=e619]: Cybertesis FISI UNMSM
+                  - img [ref=e623]
+              - link "Ingenieria de datos unmsm" [ref=e628] [cursor=pointer]:
+                - /url: /search?sca_esv=8841194606cfa8ed&q=Ingenieria+de+datos+unmsm&sa=X&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ1QJ6BAhBEAE
+                - generic [ref=e629]:
+                  - generic [ref=e633]: Ingenieria de datos unmsm
+                  - img [ref=e637]
+        - navigation [ref=e639]:
+          - heading "Navegación de páginas" [level=1] [ref=e640]
+          - text: "1"
+          - link "Page 2" [ref=e643] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=10&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAE
+            - text: "2"
+          - link "Page 3" [ref=e645] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=20&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAG
+            - text: "3"
+          - link "Page 4" [ref=e647] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=30&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAI
+            - text: "4"
+          - link "Page 5" [ref=e649] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=40&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAK
+            - text: "5"
+          - link "Page 6" [ref=e651] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=50&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAM
+            - text: "6"
+          - link "Page 7" [ref=e653] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=60&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAO
+            - text: "7"
+          - link "Page 8" [ref=e655] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=70&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAQ
+            - text: "8"
+          - link "Page 9" [ref=e657] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=80&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAS
+            - text: "9"
+          - link "Page 10" [ref=e659] [cursor=pointer]:
+            - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=90&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8tMDegQIORAU
+            - text: "10"
+          - heading "Siguiente" [level=2] [ref=e661]:
+            - link "Siguiente" [ref=e662] [cursor=pointer]:
+              - /url: /search?q=unmsm+facultad+ingenieria+sistemas+revista+formato+articulo+latex+ojs&sca_esv=8841194606cfa8ed&ei=DWlYavqUFvCB5OUPyLLjwQg&start=10&sa=N&sstk=AU9db-CQfNXYuvz13wQQ_x8VVwhCfGKGISKUTQcigSFaO1eIuO_9rD78oajCefpHL1h0SXg08lj9SngjAh5K33t6P5rUF2hkz1xPiQ&ved=2ahUKEwi6z-DHuNaVAxXwALkGHUjZOIgQ8NMDegQIORAW
+              - generic [ref=e664]: Siguiente
+      - navigation
+    - contentinfo [ref=e665]:
+      - heading "Vínculos a pie de página" [level=1] [ref=e666]
+      - generic [ref=e670]:
+        - generic [ref=e672]:
+          - text: Perú
+          - generic [ref=e674]:
+            - button "07006, Lima - Según tu actividad anterior" [ref=e676] [cursor=pointer]:
+              - generic [ref=e677]: 07006, Lima
+              - generic [ref=e679]:
+                - text: "-"
+                - generic [ref=e680]: Según tu actividad anterior
+            - text: "-"
+            - button "Actualizar ubicación" [ref=e682] [cursor=pointer]: Actualizar ubicación
+        - generic [ref=e685]:
+          - link "Ayuda" [ref=e686] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=es-PE&fg=1
+          - link "Enviar comentarios" [ref=e687] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidad" [ref=e688] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=es-PE&fg=1
+          - link "Condiciones" [ref=e689] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=es-PE&fg=1

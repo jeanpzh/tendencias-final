@@ -1,0 +1,437 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - button [ref=e4] [cursor=pointer]
+    - link "Página principal" [ref=e6] [cursor=pointer]:
+      - /url: /schhp?hl=es&as_sdt=0,5
+    - generic [ref=e9]:
+      - textbox "Buscar" [ref=e11]: "\"chatbot usability scale\" OR \"conversational agent evaluation\" OR \"UX chatbot\" OR \"intelligent user interface evaluation\""
+      - button "Buscar" [ref=e12] [cursor=pointer]
+    - link "Iniciar sesión" [ref=e16] [cursor=pointer]:
+      - /url: https://accounts.google.com/Login?hl=es&continue=https://scholar.google.com/scholar%3Fq%3D%2522chatbot%2Busability%2Bscale%2522%2BOR%2B%2522conversational%2Bagent%2Bevaluation%2522%2BOR%2B%2522UX%2Bchatbot%2522%2BOR%2B%2522intelligent%2Buser%2Binterface%2Bevaluation%2522%26as_ylo%3D2020%26as_yhi%3D2026
+  - generic [ref=e17]:
+    - generic [ref=e21]: Artículos
+    - generic [ref=e23]: Aproximadamente 754 resultados (0.37 s)
+    - generic [ref=e24]:
+      - link "Mi perfil" [ref=e25] [cursor=pointer]:
+        - /url: /citations?hl=es
+        - generic [ref=e27]: Mi perfil
+      - link "Mi biblioteca" [ref=e28] [cursor=pointer]:
+        - /url: /scholar?scilib=1&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5
+        - generic [ref=e30]: Mi biblioteca
+  - generic [ref=e31]:
+    - navigation [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - list [ref=e35]:
+            - listitem [ref=e36]:
+              - link "Cualquier momento" [ref=e37] [cursor=pointer]:
+                - /url: /scholar?q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5
+            - listitem [ref=e38]:
+              - link "Desde 2026" [ref=e39] [cursor=pointer]:
+                - /url: /scholar?as_ylo=2026&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5
+            - listitem [ref=e40]:
+              - link "Desde 2025" [ref=e41] [cursor=pointer]:
+                - /url: /scholar?as_ylo=2025&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5
+            - listitem [ref=e42]:
+              - link "Desde 2022" [ref=e43] [cursor=pointer]:
+                - /url: /scholar?as_ylo=2022&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5
+            - listitem [ref=e44]:
+              - link "Intervalo específico..." [ref=e45] [cursor=pointer]:
+                - /url: javascript:void(0)
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - textbox [ref=e49]: "2020"
+              - text: —
+              - textbox [ref=e51]: "2026"
+            - button "Buscar" [ref=e53] [cursor=pointer]:
+              - generic [ref=e55]: Buscar
+        - list [ref=e56]:
+          - listitem [ref=e57]:
+            - link "Ordenar por relevancia" [ref=e58] [cursor=pointer]:
+              - /url: /scholar?hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22
+          - listitem [ref=e59]:
+            - link "Ordenar por fecha" [ref=e60] [cursor=pointer]:
+              - /url: /scholar?hl=es&as_sdt=0,5&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&scisbd=1
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - link "Cualquier idioma" [ref=e63] [cursor=pointer]:
+              - /url: /scholar?lr=&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - listitem [ref=e64]:
+            - link "Buscar solo páginas en español" [ref=e65] [cursor=pointer]:
+              - /url: /scholar?lr=lang_es&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+        - list [ref=e66]:
+          - listitem [ref=e67]:
+            - link "Cualquier tipo" [ref=e68] [cursor=pointer]:
+              - /url: /scholar?q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - listitem [ref=e69]:
+            - link "Artículos de revisión" [ref=e70] [cursor=pointer]:
+              - /url: /scholar?q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026&as_rr=1
+        - list [ref=e71]:
+          - listitem [ref=e72]:
+            - checkbox "incluir patentes" [ref=e73] [cursor=pointer]:
+              - generic [ref=e74]: incluir patentes
+          - listitem [ref=e77]:
+            - checkbox "incluir citas" [checked] [ref=e78] [cursor=pointer]:
+              - generic [ref=e79]: incluir citas
+        - link "Crear alerta" [ref=e83] [cursor=pointer]:
+          - /url: /scholar_alerts?view_op=create_alert_options&hl=es&alert_query=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&alert_params=%3Fhl%3Des%26as_sdt%3D0,5
+          - generic [ref=e85]: Crear alerta
+    - main [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - link "[PDF] springer.com" [ref=e93] [cursor=pointer]:
+              - /url: https://link.springer.com/content/pdf/10.1007/s00779-021-01582-9.pdf
+            - generic [ref=e94]:
+              - 'heading "The chatbot usability scale: the design and pilot of a usability scale for interaction with AI-based conversational agents" [level=3] [ref=e95]':
+                - 'link "The chatbot usability scale: the design and pilot of a usability scale for interaction with AI-based conversational agents" [ref=e96] [cursor=pointer]':
+                  - /url: https://link.springer.com/article/10.1007/s00779-021-01582-9
+              - generic [ref=e97]:
+                - link "S Borsci" [ref=e98] [cursor=pointer]:
+                  - /url: /citations?user=rfrPpbkAAAAJ&hl=es&oi=sra
+                - text: ","
+                - link "A Malizia" [ref=e99] [cursor=pointer]:
+                  - /url: /citations?user=46Vso-sAAAAJ&hl=es&oi=sra
+                - text: ","
+                - link "M Schmettow" [ref=e100] [cursor=pointer]:
+                  - /url: /citations?user=sUUgYe8AAAAJ&hl=es&oi=sra
+                - text: … - Personal and ubiquitous …, 2022 - Springer
+              - generic [ref=e101]:
+                - text: Standardised tools to assess a user’s satisfaction with the experience of using chatbots and
+                - text: conversational agents are currently unavailable. This work describes four studies, including …
+              - generic [ref=e102]:
+                - button "Guardar" [ref=e103] [cursor=pointer]:
+                  - img [ref=e104]
+                  - text: Guardar
+                - button "Citar" [ref=e106] [cursor=pointer]:
+                  - img [ref=e107]
+                  - text: Citar
+                - link "Citado por 352" [ref=e109] [cursor=pointer]:
+                  - /url: /scholar?cites=15705445296885785468&as_sdt=2005&sciodt=0,5&hl=es
+                - link "Artículos relacionados" [ref=e110] [cursor=pointer]:
+                  - /url: /scholar?q=related:fOM0WEnz9NkJ:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - link "Las 16 versiones" [ref=e111] [cursor=pointer]:
+                  - /url: /scholar?cluster=15705445296885785468&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e112]:
+            - link "[PDF] springer.com" [ref=e116] [cursor=pointer]:
+              - /url: https://link.springer.com/content/pdf/10.1007/s00779-022-01690-0.pdf
+            - generic [ref=e117]:
+              - 'heading "A confirmatory factorial analysis of the Chatbot Usability Scale: a multilanguage validation" [level=3] [ref=e118]':
+                - 'link "A confirmatory factorial analysis of the Chatbot Usability Scale: a multilanguage validation" [ref=e119] [cursor=pointer]':
+                  - /url: https://link.springer.com/article/10.1007/s00779-022-01690-0
+              - generic [ref=e120]:
+                - link "S Borsci" [ref=e121] [cursor=pointer]:
+                  - /url: /citations?user=rfrPpbkAAAAJ&hl=es&oi=sra
+                - text: ","
+                - link "M Schmettow" [ref=e122] [cursor=pointer]:
+                  - /url: /citations?user=sUUgYe8AAAAJ&hl=es&oi=sra
+                - text: ","
+                - link "A Malizia" [ref=e123] [cursor=pointer]:
+                  - /url: /citations?user=46Vso-sAAAAJ&hl=es&oi=sra
+                - text: … - Personal and Ubiquitous …, 2023 - Springer
+              - generic [ref=e124]:
+                - text: The Bot Usability Scale (BUS) is a standardised tool to assess and compare the satisfaction
+                - text: of users after interacting with chatbots to support the development of usable conversational …
+              - generic [ref=e125]:
+                - button "Guardar" [ref=e126] [cursor=pointer]:
+                  - img [ref=e127]
+                  - text: Guardar
+                - button "Citar" [ref=e129] [cursor=pointer]:
+                  - img [ref=e130]
+                  - text: Citar
+                - link "Citado por 71" [ref=e132] [cursor=pointer]:
+                  - /url: /scholar?cites=12625287470382204036&as_sdt=2005&sciodt=0,5&hl=es
+                - link "Artículos relacionados" [ref=e133] [cursor=pointer]:
+                  - /url: /scholar?q=related:hERSCxAINq8J:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - link "Las 17 versiones" [ref=e134] [cursor=pointer]:
+                  - /url: /scholar?cluster=12625287470382204036&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e135]:
+            - link "[PDF] springer.com" [ref=e139] [cursor=pointer]:
+              - /url: https://link.springer.com/content/pdf/10.1007/s00779-024-01834-4.pdf
+            - generic [ref=e140]:
+              - heading "Re-examining the chatBot Usability Scale (BUS-11) to assess user experience with customer relationship management chatbots" [level=3] [ref=e141]:
+                - link "Re-examining the chatBot Usability Scale (BUS-11) to assess user experience with customer relationship management chatbots" [ref=e142] [cursor=pointer]:
+                  - /url: https://link.springer.com/article/10.1007/s00779-024-01834-4
+              - generic [ref=e143]:
+                - link "S Borsci" [ref=e144] [cursor=pointer]:
+                  - /url: /citations?user=rfrPpbkAAAAJ&hl=es&oi=sra
+                - text: ","
+                - link "M Schmettow" [ref=e145] [cursor=pointer]:
+                  - /url: /citations?user=sUUgYe8AAAAJ&hl=es&oi=sra
+                - text: "- Personal and Ubiquitous Computing, 2024 - Springer"
+              - generic [ref=e146]:
+                - text: Intelligent systems, such as chatbots, are likely to strike new qualities of UX that are not
+                - text: covered by instruments validated for legacy human–computer interaction systems. A new …
+              - generic [ref=e147]:
+                - button "Guardar" [ref=e148] [cursor=pointer]:
+                  - img [ref=e149]
+                  - text: Guardar
+                - button "Citar" [ref=e151] [cursor=pointer]:
+                  - img [ref=e152]
+                  - text: Citar
+                - link "Citado por 25" [ref=e154] [cursor=pointer]:
+                  - /url: /scholar?cites=2499828124418493565&as_sdt=2005&sciodt=0,5&hl=es
+                - link "Artículos relacionados" [ref=e155] [cursor=pointer]:
+                  - /url: /scholar?q=related:fcx-O28ssSIJ:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - link "Las 7 versiones" [ref=e156] [cursor=pointer]:
+                  - /url: /scholar?cluster=2499828124418493565&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e158]:
+            - heading "Towards validating a chatbot usability scale" [level=3] [ref=e159]:
+              - link "Towards validating a chatbot usability scale" [ref=e160] [cursor=pointer]:
+                - /url: https://link.springer.com/chapter/10.1007/978-3-031-35708-4_24
+            - generic [ref=e161]:
+              - text: S Holmes,
+              - link "R Bond" [ref=e162] [cursor=pointer]:
+                - /url: /citations?user=WN5qJ-EAAAAJ&hl=es&oi=sra
+              - text: ","
+              - link "A Moorhead" [ref=e163] [cursor=pointer]:
+                - /url: /citations?user=_RlqjbwAAAAJ&hl=es&oi=sra
+              - text: ","
+              - link "J Zheng" [ref=e164] [cursor=pointer]:
+                - /url: /citations?user=R6hUIrkAAAAJ&hl=es&oi=sra
+              - text: … - … Conference on Human …, 2023 - Springer
+            - generic [ref=e165]:
+              - text: A chatbot usability questionnaire (CUQ) was designed to measure the usability of chatbots.
+              - text: "Study objectives: 1) to test the construct validity of CUQ (ie does it differentiate between …"
+            - generic [ref=e166]:
+              - button "Guardar" [ref=e167] [cursor=pointer]:
+                - img [ref=e168]
+                - text: Guardar
+              - button "Citar" [ref=e170] [cursor=pointer]:
+                - img [ref=e171]
+                - text: Citar
+              - link "Citado por 29" [ref=e173] [cursor=pointer]:
+                - /url: /scholar?cites=6867031908423920333&as_sdt=2005&sciodt=0,5&hl=es
+              - link "Artículos relacionados" [ref=e174] [cursor=pointer]:
+                - /url: /scholar?q=related:zWrhOiOZTF8J:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+              - link "Las 3 versiones" [ref=e175] [cursor=pointer]:
+                - /url: /scholar?cluster=6867031908423920333&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e176]:
+            - link "[HTML] jmir.org" [ref=e180] [cursor=pointer]:
+              - /url: https://humanfactors.jmir.org/2026/1/e84971
+            - generic [ref=e181]:
+              - 'heading "[HTML] Chatbot Usability Scale in Chinese Users: Cross-Cultural Adaptation and Validation Study" [level=3] [ref=e182]':
+                - generic [ref=e183]: "[HTML]"
+                - 'link "Chatbot Usability Scale in Chinese Users: Cross-Cultural Adaptation and Validation Study" [ref=e184] [cursor=pointer]':
+                  - /url: https://humanfactors.jmir.org/2026/1/e84971
+              - generic [ref=e185]:
+                - link "H Ma" [ref=e186] [cursor=pointer]:
+                  - /url: /citations?user=ek1xGCEAAAAJ&hl=es&oi=sra
+                - text: ", R Pei,"
+                - link "S Li" [ref=e187] [cursor=pointer]:
+                  - /url: /citations?user=j3b-GlcAAAAJ&hl=es&oi=sra
+                - text: ", A Wang, X Tang… - JMIR Human …, 2026 - humanfactors.jmir.org"
+              - generic [ref=e188]:
+                - text: Background Chatbots are increasingly deployed across various domains; however, systematic
+                - text: evaluation of their usability remains limited, particularly in non-Western contexts. The 11-…
+              - generic [ref=e189]:
+                - button "Guardar" [ref=e190] [cursor=pointer]:
+                  - img [ref=e191]
+                  - text: Guardar
+                - button "Citar" [ref=e193] [cursor=pointer]:
+                  - img [ref=e194]
+                  - text: Citar
+                - link "Artículos relacionados" [ref=e196] [cursor=pointer]:
+                  - /url: /scholar?q=related:IwHcIhRizFwJ:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - link "Las 7 versiones" [ref=e197] [cursor=pointer]:
+                  - /url: /scholar?cluster=6686827385362055459&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - button "Más" [ref=e198] [cursor=pointer]:
+                  - img [ref=e199]
+          - generic [ref=e201]:
+            - link "[PDF] springer.com" [ref=e205] [cursor=pointer]:
+              - /url: https://link.springer.com/content/pdf/10.1007/s00779-023-01731-2.pdf
+            - generic [ref=e206]:
+              - 'heading "Ciao AI: the Italian adaptation and validation of the Chatbot Usability Scale" [level=3] [ref=e207]':
+                - 'link "Ciao AI: the Italian adaptation and validation of the Chatbot Usability Scale" [ref=e208] [cursor=pointer]':
+                  - /url: https://link.springer.com/article/10.1007/s00779-023-01731-2
+              - generic [ref=e209]:
+                - link "S Borsci" [ref=e210] [cursor=pointer]:
+                  - /url: /citations?user=rfrPpbkAAAAJ&hl=es&oi=sra
+                - text: ", E Prati,"
+                - link "A Malizia" [ref=e211] [cursor=pointer]:
+                  - /url: /citations?user=46Vso-sAAAAJ&hl=es&oi=sra
+                - text: ","
+                - link "M Schmettow" [ref=e212] [cursor=pointer]:
+                  - /url: /citations?user=sUUgYe8AAAAJ&hl=es&oi=sra
+                - text: … - Personal and Ubiquitous …, 2023 - Springer
+              - generic [ref=e213]:
+                - text: Chatbot-based tools are becoming pervasive in multiple domains from commercial websites
+                - text: to rehabilitation applications. Only recently, an eleven-item satisfaction inventory was …
+              - generic [ref=e214]:
+                - button "Guardar" [ref=e215] [cursor=pointer]:
+                  - img [ref=e216]
+                  - text: Guardar
+                - button "Citar" [ref=e218] [cursor=pointer]:
+                  - img [ref=e219]
+                  - text: Citar
+                - link "Citado por 26" [ref=e221] [cursor=pointer]:
+                  - /url: /scholar?cites=13693540526567632042&as_sdt=2005&sciodt=0,5&hl=es
+                - link "Artículos relacionados" [ref=e222] [cursor=pointer]:
+                  - /url: /scholar?q=related:qqx6s446Cb4J:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - link "Las 23 versiones" [ref=e223] [cursor=pointer]:
+                  - /url: /scholar?cluster=13693540526567632042&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e224]:
+            - link "[PDF] ieee.org" [ref=e228] [cursor=pointer]:
+              - /url: https://ieeexplore.ieee.org/iel7/6287639/6514899/10414039.pdf
+            - generic [ref=e229]:
+              - heading "A review of subjective scales measuring the user experience of voice assistants" [level=3] [ref=e230]:
+                - link "A review of subjective scales measuring the user experience of voice assistants" [ref=e231] [cursor=pointer]:
+                  - /url: https://ieeexplore.ieee.org/abstract/document/10414039/
+              - generic [ref=e232]:
+                - link "LID Faruk" [ref=e233] [cursor=pointer]:
+                  - /url: /citations?user=EF2_gicAAAAJ&hl=es&oi=sra
+                - text: ", MD Babakerkhell,"
+                - link "P Mongkolnam" [ref=e234] [cursor=pointer]:
+                  - /url: /citations?user=gfblr6kAAAAJ&hl=es&oi=sra
+                - text: … - IEEE …, 2024 - ieeexplore.ieee.org
+              - generic [ref=e235]:
+                - text: … out a systematic literature review to define attributes that analyze the interaction quality of
+                - text: chatbot, and also it design, and developed a new standardize scale ChatBot Usability Scale (…
+              - generic [ref=e236]:
+                - button "Guardar" [ref=e237] [cursor=pointer]:
+                  - img [ref=e238]
+                  - text: Guardar
+                - button "Citar" [ref=e240] [cursor=pointer]:
+                  - img [ref=e241]
+                  - text: Citar
+                - link "Citado por 33" [ref=e243] [cursor=pointer]:
+                  - /url: /scholar?cites=1017795600718982762&as_sdt=2005&sciodt=0,5&hl=es
+                - link "Artículos relacionados" [ref=e244] [cursor=pointer]:
+                  - /url: /scholar?q=related:am7P0rTvHw4J:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - link "Las 2 versiones" [ref=e245] [cursor=pointer]:
+                  - /url: /scholar?cluster=1017795600718982762&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e247]:
+            - heading "Usability evaluation of an intelligent mobile chatbot for crop farmers" [level=3] [ref=e248]:
+              - link "Usability evaluation of an intelligent mobile chatbot for crop farmers" [ref=e249] [cursor=pointer]:
+                - /url: https://link.springer.com/chapter/10.1007/978-3-031-43940-7_9
+            - generic [ref=e250]:
+              - link "PU Usip" [ref=e251] [cursor=pointer]:
+                - /url: /citations?user=5BjPTWkAAAAJ&hl=es&oi=sra
+              - text: ", OR James,"
+              - link "DE Asuquo" [ref=e252] [cursor=pointer]:
+                - /url: /citations?user=RaayikcAAAAJ&hl=es&oi=sra
+              - text: ","
+              - link "EN Udo" [ref=e253] [cursor=pointer]:
+                - /url: /citations?user=yduo8icAAAAJ&hl=es&oi=sra
+              - text: … - … Conference on Electronic …, 2023 - Springer
+            - generic [ref=e254]:
+              - text: … The usability evaluation of the chatbot was done using chatbot Usability Scale developed
+              - text: by Brooke in 1996 [3] and modified to fit the proposed system. This system usability scale (SUS…
+            - generic [ref=e255]:
+              - button "Guardar" [ref=e256] [cursor=pointer]:
+                - img [ref=e257]
+                - text: Guardar
+              - button "Citar" [ref=e259] [cursor=pointer]:
+                - img [ref=e260]
+                - text: Citar
+              - link "Citado por 6" [ref=e262] [cursor=pointer]:
+                - /url: /scholar?cites=10191546353110455021&as_sdt=2005&sciodt=0,5&hl=es
+              - link "Artículos relacionados" [ref=e263] [cursor=pointer]:
+                - /url: /scholar?q=related:7ZITOWmlb40J:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+              - link "Las 3 versiones" [ref=e264] [cursor=pointer]:
+                - /url: /scholar?cluster=10191546353110455021&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e266]:
+            - 'heading "Chatbot user experience: design and evaluation" [level=3] [ref=e267]':
+              - 'link "Chatbot user experience: design and evaluation" [ref=e268] [cursor=pointer]':
+                - /url: https://link.springer.com/chapter/10.1007/978-3-031-76806-4_6
+            - generic [ref=e269]:
+              - link "D Peras" [ref=e270] [cursor=pointer]:
+                - /url: /citations?user=-7LOuQIAAAAJ&hl=es&oi=sra
+              - text: "- International Conference on Human-Computer …, 2024 - Springer"
+            - generic [ref=e271]:
+              - text: The paper provides a review and systematization of the literature related to the chatbot user
+              - text: experience (CUX) by focusing on the chatbot’s design and evaluation domain. An overview …
+            - generic [ref=e272]:
+              - button "Guardar" [ref=e273] [cursor=pointer]:
+                - img [ref=e274]
+                - text: Guardar
+              - button "Citar" [ref=e276] [cursor=pointer]:
+                - img [ref=e277]
+                - text: Citar
+              - link "Citado por 10" [ref=e279] [cursor=pointer]:
+                - /url: /scholar?cites=9949427431762403420&as_sdt=2005&sciodt=0,5&hl=es
+              - link "Artículos relacionados" [ref=e280] [cursor=pointer]:
+                - /url: /scholar?q=related:XKC57Ih3E4oJ:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+              - link "Las 4 versiones" [ref=e281] [cursor=pointer]:
+                - /url: /scholar?cluster=9949427431762403420&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+          - generic [ref=e282]:
+            - link "[PDF] sbc.org.br" [ref=e286] [cursor=pointer]:
+              - /url: https://journals-sol.sbc.org.br/index.php/jis/article/download/3856/2575
+            - generic [ref=e287]:
+              - heading "Proposing usability-ux technologies for the design and evaluation of text-based chatbots" [level=3] [ref=e288]:
+                - link "Proposing usability-ux technologies for the design and evaluation of text-based chatbots" [ref=e289] [cursor=pointer]:
+                  - /url: https://journals-sol.sbc.org.br/index.php/jis/article/view/3856
+              - generic [ref=e290]:
+                - text: MGS Mafra,
+                - link "K Nunes" [ref=e291] [cursor=pointer]:
+                  - /url: /citations?user=TYZZTa4AAAAJ&hl=es&oi=sra
+                - text: ", S Rocha… - Journal on …, 2024 - journals-sol.sbc.org.br"
+              - generic [ref=e292]:
+                - text: Chatbots are interactive systems that communicate using natural language with human
+                - text: users, via a textual interface or voice activation. These tools are useful for many spheres of …
+              - generic [ref=e293]:
+                - button "Guardar" [ref=e294] [cursor=pointer]:
+                  - img [ref=e295]
+                  - text: Guardar
+                - button "Citar" [ref=e297] [cursor=pointer]:
+                  - img [ref=e298]
+                  - text: Citar
+                - link "Citado por 6" [ref=e300] [cursor=pointer]:
+                  - /url: /scholar?cites=8988414423160684453&as_sdt=2005&sciodt=0,5&hl=es
+                - link "Artículos relacionados" [ref=e301] [cursor=pointer]:
+                  - /url: /scholar?q=related:pX99kktDvXwJ:scholar.google.com/&scioq=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                - button "Más" [ref=e302] [cursor=pointer]:
+                  - img [ref=e303]
+        - navigation [ref=e306]:
+          - table [ref=e308]:
+            - rowgroup [ref=e309]:
+              - row "1 2 3 4 5 6 7 8 9 10 Siguiente" [ref=e310]:
+                - cell [ref=e311]
+                - cell "1" [ref=e313]: "1"
+                - cell "2" [ref=e315]:
+                  - link "2" [ref=e316] [cursor=pointer]:
+                    - /url: /scholar?start=10&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "2"
+                - cell "3" [ref=e318]:
+                  - link "3" [ref=e319] [cursor=pointer]:
+                    - /url: /scholar?start=20&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "3"
+                - cell "4" [ref=e321]:
+                  - link "4" [ref=e322] [cursor=pointer]:
+                    - /url: /scholar?start=30&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "4"
+                - cell "5" [ref=e324]:
+                  - link "5" [ref=e325] [cursor=pointer]:
+                    - /url: /scholar?start=40&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "5"
+                - cell "6" [ref=e327]:
+                  - link "6" [ref=e328] [cursor=pointer]:
+                    - /url: /scholar?start=50&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "6"
+                - cell "7" [ref=e330]:
+                  - link "7" [ref=e331] [cursor=pointer]:
+                    - /url: /scholar?start=60&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "7"
+                - cell "8" [ref=e333]:
+                  - link "8" [ref=e334] [cursor=pointer]:
+                    - /url: /scholar?start=70&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "8"
+                - cell "9" [ref=e336]:
+                  - link "9" [ref=e337] [cursor=pointer]:
+                    - /url: /scholar?start=80&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "9"
+                - cell "10" [ref=e339]:
+                  - link "10" [ref=e340] [cursor=pointer]:
+                    - /url: /scholar?start=90&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - text: "10"
+                - cell "Siguiente" [ref=e342]:
+                  - link "Siguiente" [ref=e343] [cursor=pointer]:
+                    - /url: /scholar?start=10&q=%22chatbot+usability+scale%22+OR+%22conversational+agent+evaluation%22+OR+%22UX+chatbot%22+OR+%22intelligent+user+interface+evaluation%22&hl=es&as_sdt=0,5&as_ylo=2020&as_yhi=2026
+                    - generic [ref=e345]: Siguiente
+  - contentinfo [ref=e346]:
+    - generic [ref=e347]:
+      - link "Privacidad" [ref=e348] [cursor=pointer]:
+        - /url: //www.google.com/intl/es/policies/privacy/
+      - link "Términos" [ref=e349] [cursor=pointer]:
+        - /url: //www.google.com/intl/es/policies/terms/
+      - button "Ayuda" [ref=e350] [cursor=pointer]

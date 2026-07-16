@@ -1,0 +1,2 @@
+[     292ms] [LOG] {hash: 00c4b4983e5d35afaa1f8f531c7cf73664d537087d552da0026afd5cfe2835cf, nonce: 11} @ https://revistasinvestigacion.unmsm.edu.pe/.within.website/x/cmd/anubis/static/js/main.mjs?cacheBuster=v1.26.0-pre2:30
+[     360ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://revistasinvestigacion.unmsm.edu.pe/index.php/ingenieria:0

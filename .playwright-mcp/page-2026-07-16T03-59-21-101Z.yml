@@ -1,0 +1,125 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - button [ref=e4] [cursor=pointer]
+    - link "Página principal" [ref=e6] [cursor=pointer]:
+      - /url: /schhp?hl=es&as_sdt=0,5
+    - generic [ref=e9]:
+      - textbox "Buscar" [ref=e11]: "\"Chatbot Usability Scale in Chinese Users\" Jiang"
+      - button "Buscar" [ref=e12] [cursor=pointer]
+    - link "Iniciar sesión" [ref=e16] [cursor=pointer]:
+      - /url: https://accounts.google.com/Login?hl=es&continue=https://scholar.google.com/scholar%3Fq%3D%2522Chatbot%2BUsability%2BScale%2Bin%2BChinese%2BUsers%2522%2BJiang
+  - generic [ref=e17]:
+    - generic [ref=e21]: Artículos
+    - generic [ref=e23]: 1 resultado (0.06 s)
+    - generic [ref=e24]:
+      - link "Mi perfil" [ref=e25] [cursor=pointer]:
+        - /url: /citations?hl=es
+        - generic [ref=e27]: Mi perfil
+      - link "Mi biblioteca" [ref=e28] [cursor=pointer]:
+        - /url: /scholar?scilib=1&scioq=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+        - generic [ref=e30]: Mi biblioteca
+  - generic [ref=e31]:
+    - navigation [ref=e32]:
+      - generic [ref=e33]:
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - link "Cualquier momento" [ref=e37] [cursor=pointer]:
+              - /url: /scholar?q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+          - listitem [ref=e38]:
+            - link "Desde 2026" [ref=e39] [cursor=pointer]:
+              - /url: /scholar?as_ylo=2026&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+          - listitem [ref=e40]:
+            - link "Desde 2025" [ref=e41] [cursor=pointer]:
+              - /url: /scholar?as_ylo=2025&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+          - listitem [ref=e42]:
+            - link "Desde 2022" [ref=e43] [cursor=pointer]:
+              - /url: /scholar?as_ylo=2022&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+          - listitem [ref=e44]:
+            - link "Intervalo específico..." [ref=e45] [cursor=pointer]:
+              - /url: javascript:void(0)
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "Ordenar por relevancia" [ref=e48] [cursor=pointer]:
+              - /url: /scholar?hl=es&as_sdt=0,5&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang
+          - listitem [ref=e49]:
+            - link "Ordenar por fecha" [ref=e50] [cursor=pointer]:
+              - /url: /scholar?hl=es&as_sdt=0,5&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&scisbd=1
+        - list [ref=e51]:
+          - listitem [ref=e52]:
+            - link "Cualquier idioma" [ref=e53] [cursor=pointer]:
+              - /url: /scholar?lr=&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+          - listitem [ref=e54]:
+            - link "Buscar solo páginas en español" [ref=e55] [cursor=pointer]:
+              - /url: /scholar?lr=lang_es&q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+        - list [ref=e56]:
+          - listitem [ref=e57]:
+            - link "Cualquier tipo" [ref=e58] [cursor=pointer]:
+              - /url: /scholar?q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+          - listitem [ref=e59]:
+            - link "Artículos de revisión" [ref=e60] [cursor=pointer]:
+              - /url: /scholar?q=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5&as_rr=1
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - checkbox "incluir patentes" [ref=e63] [cursor=pointer]:
+              - generic [ref=e64]: incluir patentes
+          - listitem [ref=e67]:
+            - checkbox "incluir citas" [checked] [ref=e68] [cursor=pointer]:
+              - generic [ref=e69]: incluir citas
+        - link "Crear alerta" [ref=e73] [cursor=pointer]:
+          - /url: /scholar_alerts?view_op=create_alert_options&hl=es&alert_query=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&alert_params=%3Fhl%3Des%26as_sdt%3D0,5
+          - generic [ref=e75]: Crear alerta
+    - main [ref=e76]:
+      - generic [ref=e79]:
+        - link "[HTML] jmir.org" [ref=e83] [cursor=pointer]:
+          - /url: https://humanfactors.jmir.org/2026/1/e84971
+        - generic [ref=e84]:
+          - 'heading "[HTML] Chatbot Usability Scale in Chinese Users: Cross-Cultural Adaptation and Validation Study" [level=3] [ref=e85]':
+            - generic [ref=e86]: "[HTML]"
+            - 'link "Chatbot Usability Scale in Chinese Users: Cross-Cultural Adaptation and Validation Study" [ref=e87] [cursor=pointer]':
+              - /url: https://humanfactors.jmir.org/2026/1/e84971
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - link "H Ma" [ref=e90] [cursor=pointer]:
+                - /url: /citations?user=ek1xGCEAAAAJ&hl=es&oi=sra
+              - text: ", R Pei,"
+              - link "S Li" [ref=e91] [cursor=pointer]:
+                - /url: /citations?user=j3b-GlcAAAAJ&hl=es&oi=sra
+              - text: ", A Wang, X Tang, M Piao"
+            - text: JMIR Human Factors, 2026•humanfactors.jmir.org
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e98]:
+                - generic [ref=e99]: Background
+                - generic [ref=e100]: Chatbots are increasingly deployed across various domains; however, systematic evaluation of their usability remains limited, particularly in non-Western contexts. The 11-item Chatbot Usability Scale (BUS-11), a multidimensional instrument grounded in human-computer interaction theory, has demonstrated strong psychometric properties in prior studies; however, a validated Chinese version does not exist, despite China being one of the largest chatbot markets.
+                - generic [ref=e101]: Objective
+                - generic [ref=e102]: This study aimed to translate, culturally adapt, and validate the BUS-11 for Chinese users.
+                - generic [ref=e103]: Methods
+                - generic [ref=e104]: Following established cross-cultural adaptation procedures, the scale was forward- and back-translated, reviewed by an expert committee, and pilot-tested for clarity and feasibility. A main validation study was then conducted with 214 participants, who completed 438 evaluations of the chatbots across 10 widely used systems.
+                - generic [ref=e105]: Results
+                - generic [ref=e106]: Psychometric analyses demonstrated excellent scale-level content validity index (ie, 0.92), strong internal consistency (Cronbach α=0.92), and a clear 3-factor structure (Accessibility, Interaction Process Quality, and Information Quality), explaining 56.1% of the variance. Meanwhile, privacy or security and response time were retained as single-item indicators. The Chinese BUS-11 was concise, user-friendly, and psychometrically robust.
+                - generic [ref=e107]: Conclusions
+                - generic [ref=e108]: This work fills a critical gap by providing the first validated instrument for assessing chatbot usability in Chinese contexts, enabling reliable cross-cultural comparisons and supporting both research and practical design evaluation in human-computer interaction.
+              - generic [ref=e110]: humanfactors.jmir.org
+            - link "Mostrar más" [ref=e112] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - text: Mostrar más
+          - generic [ref=e114]:
+            - button "Guardar" [ref=e115] [cursor=pointer]:
+              - img [ref=e116]
+              - text: Guardar
+            - button "Citar" [ref=e118] [cursor=pointer]:
+              - img [ref=e119]
+              - text: Citar
+            - link "Artículos relacionados" [ref=e121] [cursor=pointer]:
+              - /url: /scholar?q=related:IwHcIhRizFwJ:scholar.google.com/&scioq=%22Chatbot+Usability+Scale+in+Chinese+Users%22+Jiang&hl=es&as_sdt=0,5
+            - link "Las 7 versiones" [ref=e122] [cursor=pointer]:
+              - /url: /scholar?cluster=6686827385362055459&hl=es&as_sdt=0,5
+            - button "Más" [ref=e123] [cursor=pointer]:
+              - img [ref=e124]
+  - contentinfo [ref=e126]:
+    - generic [ref=e127]:
+      - link "Privacidad" [ref=e128] [cursor=pointer]:
+        - /url: //www.google.com/intl/es/policies/privacy/
+      - link "Términos" [ref=e129] [cursor=pointer]:
+        - /url: //www.google.com/intl/es/policies/terms/
+      - button "Ayuda" [ref=e130] [cursor=pointer]

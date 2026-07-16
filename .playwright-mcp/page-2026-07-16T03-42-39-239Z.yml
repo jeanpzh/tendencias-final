@@ -1,0 +1,57 @@
+- main [ref=e2]:
+  - generic "Skip content" [ref=e3] [cursor=pointer]: Skip to content
+  - generic "Header" [ref=e4]:
+    - img "Scopus" [ref=e6]
+  - generic [ref=e8]:
+    - generic [ref=e10]:
+      - button "Cancel" [ref=e11] [cursor=pointer]:
+        - img "Cancel" [ref=e12]
+      - img "Elsevier" [ref=e13]
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "Welcome" [level=1] [ref=e16]
+        - heading "Enter your email to continue with Scopus" [level=2] [ref=e17]
+        - heading "If you have an Elsevier account, you will be directed to Sign in." [level=2] [ref=e18]
+        - heading "If no account is found in our database, you will be asked to Register." [level=2] [ref=e19]
+      - generic [ref=e21]:
+        - textbox "Email" [active] [ref=e22]
+        - generic: Email
+      - generic [ref=e23]:
+        - button "Continue" [disabled] [ref=e25]
+        - button "Sign in via your organization" [ref=e27]
+        - button "Get help with access" [ref=e28] [cursor=pointer]
+  - generic "Footer" [ref=e29]:
+    - generic [ref=e30]:
+      - link "Elsevier homepage" [ref=e31] [cursor=pointer]:
+        - /url: http://www.elsevier.com/
+        - img "Elsevier homepage" [ref=e32]
+      - link "Elsevier homepage" [ref=e33] [cursor=pointer]:
+        - /url: http://www.elsevier.com/
+        - img "Elsevier homepage" [ref=e34]
+    - generic [ref=e35]:
+      - generic "Copyright Notice General" [ref=e36]: Copyright © 2026 Elsevier, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+      - list [ref=e38]:
+        - listitem [ref=e39]:
+          - link "About Elsevier" [ref=e40] [cursor=pointer]:
+            - /url: https://www.elsevier.com/about
+            - text: About Elsevier↗
+        - listitem [ref=e41]:
+          - link "Terms and conditions" [ref=e42] [cursor=pointer]:
+            - /url: https://www.elsevier.com/legal/elsevier-website-terms-and-conditions
+            - text: Terms and conditions↗
+        - listitem [ref=e43]:
+          - link "Privacy policy" [ref=e44] [cursor=pointer]:
+            - /url: https://www.elsevier.com/legal/privacy-policy
+            - text: Privacy policy↗
+        - listitem [ref=e45]:
+          - link "Cookie settings" [ref=e46] [cursor=pointer]:
+            - /url: "javascript: void(0)"
+            - text: Cookie settings↗
+        - listitem [ref=e47]:
+          - link "Help" [ref=e48] [cursor=pointer]:
+            - /url: https://www.elsevier.support/elsevieraccess
+            - text: Help↗
+    - link "Relx group image" [ref=e49] [cursor=pointer]:
+      - /url: http://www.reedelsevier.com/
+      - img "RELXGroup" [ref=e50]
+      - img "RELXGroup" [ref=e51]

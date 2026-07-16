@@ -1,0 +1,329 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Ir al contenido principal" [ref=e2] [cursor=pointer]
+      - link "Ayuda sobre la accesibilidad" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=es-PE
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - generic:
+          - generic:
+            - generic:
+              - img
+        - 'link "Copa Mundial 2026: El arte de la chilena" [ref=e13] [cursor=pointer]':
+          - /url: https://www.google.com/webhp?hl=es&ictx=2&sa=X&ved=0ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQPQgK
+          - 'img "Copa Mundial 2026: El arte de la chilena" [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - combobox "Buscar" [ref=e19]: "\"revista de la facultad de ingenieria\" unmsm formato autor guia autores \"revista de la facultad de ingenieria\" unmsm formato autor guia autores"
+            - generic [ref=e20]:
+              - button "Borrar" [ref=e22] [cursor=pointer]:
+                - img [ref=e24]
+              - generic [ref=e27]:
+                - button "Búsqueda por voz" [ref=e28] [cursor=pointer]:
+                  - img [ref=e29]
+                - button "Búsqueda por imagen" [ref=e31] [cursor=pointer]:
+                  - img [ref=e32]
+          - button "Buscar" [ref=e34] [cursor=pointer]:
+            - img [ref=e37]
+    - generic [ref=e39]:
+      - button "Configuración" [ref=e41] [cursor=pointer]:
+        - img [ref=e44]
+      - button "Compartir" [ref=e47] [cursor=pointer]:
+        - img [ref=e51]
+      - generic [ref=e53]:
+        - button "Aplicaciones de Google" [ref=e55] [cursor=pointer]:
+          - img [ref=e56]
+        - link "Iniciar sesión" [ref=e60] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=es&passive=true&continue=https://www.google.com/search%3Fq%3D%2522revista%2Bde%2Bla%2Bfacultad%2Bde%2Bingenieria%2522%2Bunmsm%2Bformato%2Bautor%2Bguia%2Bautores%26sei%3D9WhYap30BLrY5OUPhL2uqQ4&ec=futura_srp_og_si_72236_p
+  - generic [ref=e62]:
+    - navigation [ref=e68]:
+      - generic [ref=e74]:
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "Modo IA" [ref=e79] [cursor=pointer]:
+              - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&udm=50&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&aep=1&ntc=1&cs=0&sa=X&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ2J8OegQIFBAD
+              - generic [ref=e82]: Modo IA
+          - listitem [ref=e83]:
+            - link "Todo" [disabled] [ref=e84]:
+              - generic [ref=e86]: Todo
+          - listitem [ref=e87]:
+            - link "Imágenes" [ref=e88] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&udm=2&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sa=X&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQtKgLegQIFhAB
+              - generic [ref=e90]: Imágenes
+          - listitem [ref=e91]:
+            - link "Vídeos" [ref=e92] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&udm=7&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sa=X&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQtKgLegQIGRAB
+              - generic [ref=e94]: Vídeos
+          - listitem [ref=e95]:
+            - link "Vídeos cortos" [ref=e96] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&udm=39&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sa=X&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQs6gLegQIGhAB
+              - generic [ref=e98]: Vídeos cortos
+          - listitem [ref=e99]:
+            - link "Noticias" [ref=e100] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&tbm=nws&source=lnms&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&sa=X&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ0pQJegQIGBAB
+              - generic [ref=e102]: Noticias
+          - listitem [ref=e103]:
+            - link "Libros" [ref=e104] [cursor=pointer]:
+              - /url: /search?sca_esv=8841194606cfa8ed&q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&udm=36&source=lnms&fbs=ABfTbFUDadgeu2mn4mYJ8iEZ1GUDd8ABuXxNzQEi57SWOuuPdcURz3vM2j0dknRjZr5tESjVX0ozDC_MzSS9AaRCiJHvwFCq7nl2MSfdY_L_tMXzjsSSLavHppj0xGkub9GRsO0ZaXRHtihb-OAz-cWfXcQ6MypLly1hFglHF4POrdv1q1nebBGV5QiI06n1FRzn9eTFweRnO5PGLZJVXVLz2NaGwVEOkQ&sa=X&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ0pQJegQIFxAB
+              - generic [ref=e106]: Libros
+          - listitem [ref=e107]:
+            - button "Más filtros" [ref=e108] [cursor=pointer]:
+              - generic "Más filtros" [ref=e109]:
+                - generic [ref=e110]:
+                  - generic [ref=e111]: Más
+                  - img [ref=e113]
+        - button "Herramientas" [ref=e116] [cursor=pointer]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: Herramientas
+            - img [ref=e121]
+    - heading "Resultados de búsqueda" [level=1] [ref=e123]
+    - main [ref=e129]:
+      - generic [ref=e133]:
+        - generic [ref=e136]:
+          - heading "Resultados web" [level=2] [ref=e137]
+          - generic [ref=e138]:
+            - generic [ref=e141]:
+              - link "Formato de Artículos para Revista I2+D | PDF | Publicación Scribd https://es.scribd.com › document › Formato-Presentacio..." [ref=e143] [cursor=pointer]:
+                - /url: https://es.scribd.com/document/398611384/Formato-Presentacion-Articulos-I2D
+                - heading "Formato de Artículos para Revista I2+D | PDF | Publicación" [level=3] [ref=e144]
+                - generic [ref=e150]:
+                  - generic [ref=e152]: Scribd
+                  - generic [ref=e154]: https://es.scribd.com › document › Formato-Presentacio...
+              - button "Acerca de este resultado" [ref=e157] [cursor=pointer]:
+                - img [ref=e160]
+            - generic [ref=e164]:
+              - text: Este documento describe el
+              - emphasis [ref=e165]: formato
+              - text: para la presentación de artículos en la
+              - emphasis [ref=e166]: Revista de la Facultad de Ingeniería
+              - text: de la Universidad Pedagógica y Tecnológica ...
+        - generic [ref=e177]:
+          - heading "Buscando Pensando un poco más" [level=2] [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e184]: Buscando
+              - generic [ref=e194]: Pensando un poco más
+          - progressbar "Generando" [ref=e196]
+        - generic [ref=e249]:
+          - heading "Resultados web" [level=2] [ref=e250]
+          - generic [ref=e251]:
+            - generic [ref=e254]:
+              - link "universidad nacional mayor de san marcos Universidad Nacional Mayor de San Marcos (UNMSM) https://eventosindustrial.unmsm.edu.pe › tesis1" [ref=e256] [cursor=pointer]:
+                - /url: https://eventosindustrial.unmsm.edu.pe/upg_old/archivos/TESIS2018/MAESTRIA/tesis1.pdf
+                - heading "universidad nacional mayor de san marcos" [level=3] [ref=e257]
+                - generic [ref=e259]:
+                  - img [ref=e264]
+                  - generic [ref=e266]:
+                    - generic [ref=e268]: Universidad Nacional Mayor de San Marcos (UNMSM)
+                    - generic [ref=e270]: https://eventosindustrial.unmsm.edu.pe › tesis1
+              - generic [ref=e271]:
+                - generic:
+                  - generic: PDF
+              - button "Acerca de este resultado" [ref=e274] [cursor=pointer]:
+                - img [ref=e277]
+            - generic [ref=e279]:
+              - generic [ref=e281]:
+                - emphasis [ref=e282]: Revista de la Facultad de Ingeniería
+                - text: . Industrial 16(1), (pp. 17-35).
+                - emphasis [ref=e283]: UNMSM
+                - text: . Perú. 82. Villadiego, María. (2012). Diseño Metodológico para la implementación.
+              - generic [ref=e284]: 209 páginas
+        - generic [ref=e288]:
+          - generic [ref=e291]:
+            - link "Revista No. 48 Facultad de Ingeniería Química | UADY https://www.ingquimica.uady.mx › revista › pdf" [ref=e293] [cursor=pointer]:
+              - /url: https://www.ingquimica.uady.mx/revista/pdf/Revista48.pdf
+              - heading "Revista No. 48" [level=3] [ref=e294]
+              - generic [ref=e296]:
+                - img [ref=e301]
+                - generic [ref=e303]:
+                  - generic [ref=e305]: Facultad de Ingeniería Química | UADY
+                  - generic [ref=e307]: https://www.ingquimica.uady.mx › revista › pdf
+            - generic [ref=e308]:
+              - generic:
+                - generic: PDF
+            - button "Acerca de este resultado" [ref=e311] [cursor=pointer]:
+              - img [ref=e314]
+          - generic [ref=e316]:
+            - generic [ref=e318]:
+              - text: La
+              - emphasis [ref=e319]: Revista de la Facultad de Ingeniería
+              - text: Química es una publicación semestral relacionada con la Ingeniería. Química, la Química Industrial, la Ingeniería ...
+            - generic [ref=e320]: 38 páginas
+        - generic [ref=e324]:
+          - generic [ref=e327]:
+            - link "Conociendo un modelo de formación emprendedora en ... Ciencia Latina Revista Científica Multidisciplinar https://ciencialatina.org › cienciala › article › view" [ref=e329] [cursor=pointer]:
+              - /url: https://ciencialatina.org/index.php/cienciala/article/view/1274
+              - heading "Conociendo un modelo de formación emprendedora en ..." [level=3] [ref=e330]
+              - generic [ref=e336]:
+                - generic [ref=e338]: Ciencia Latina Revista Científica Multidisciplinar
+                - generic [ref=e340]: https://ciencialatina.org › cienciala › article › view
+            - button "Acerca de este resultado" [ref=e343] [cursor=pointer]:
+              - img [ref=e346]
+          - generic [ref=e349]:
+            - generic [ref=e350]: por CAA Pacherres · 2021 —
+            - generic [ref=e351]:
+              - text: "Lima-Perú: Universidad Nacional Mayor de San Marcos -"
+              - emphasis [ref=e352]: Revista de la Facultad de Ingeniería
+              - text: Industrial. Torres Valladares, M., & Torres Lajo, M.
+        - generic [ref=e356]:
+          - generic [ref=e359]:
+            - link "Nº E21 Revista Ibérica de Sistemas e Tecnologias de Informação http://www.risti.xyz › issues › ristie21" [ref=e361] [cursor=pointer]:
+              - /url: http://www.risti.xyz/issues/ristie21.pdf
+              - heading "Nº E21" [level=3] [ref=e362]
+              - generic [ref=e368]:
+                - generic [ref=e370]: Revista Ibérica de Sistemas e Tecnologias de Informação
+                - generic [ref=e372]: http://www.risti.xyz › issues › ristie21
+            - generic [ref=e373]:
+              - generic:
+                - generic: PDF
+            - button "Acerca de este resultado" [ref=e376] [cursor=pointer]:
+              - img [ref=e379]
+          - generic [ref=e381]:
+            - generic [ref=e382]:
+              - generic [ref=e383]: 2 ago. 2018 —
+              - generic [ref=e384]:
+                - text: ...
+                - emphasis [ref=e385]: Revista de la Facultad de Ingeniería
+                - text: Industria, 1–2. Valero, A. (2013). Principios de color y holopintura. Club Universitario. Page 241. 226.
+            - generic [ref=e386]: 423 páginas
+        - generic [ref=e390]:
+          - generic [ref=e393]:
+            - link "Educación virtual basada en tecnologías de información Redalyc.org https://www.redalyc.org › pdf" [ref=e395] [cursor=pointer]:
+              - /url: https://www.redalyc.org/pdf/816/81670210.pdf
+              - heading "Educación virtual basada en tecnologías de información" [level=3] [ref=e396]
+              - generic [ref=e402]:
+                - generic [ref=e404]: Redalyc.org
+                - generic [ref=e406]: https://www.redalyc.org › pdf
+            - generic [ref=e407]:
+              - generic:
+                - generic: PDF
+            - button "Acerca de este resultado" [ref=e410] [cursor=pointer]:
+              - img [ref=e413]
+          - generic [ref=e415]:
+            - generic [ref=e416]:
+              - generic [ref=e417]: por RE Tejada · 2004 · Mencionado por 44 —
+              - generic [ref=e418]:
+                - text: ", sin que ello signifique abandonar su contexto laboral social y familiar."
+                - emphasis [ref=e419]: Revista de la Facultad de Ingeniería
+                - text: "Industrial. Vol. (7) 2: pp. 58-69 (2004)"
+                - emphasis [ref=e420]: UNMSM
+                - text: .
+            - generic [ref=e421]: 13 páginas
+        - generic [ref=e425]:
+          - generic [ref=e428]:
+            - link "aplicación de la Matriz IPERC y sistema simplificado EPISTEMUS https://epistemus.unison.mx › epistemus › article › view" [ref=e430] [cursor=pointer]:
+              - /url: https://epistemus.unison.mx/index.php/epistemus/article/view/467
+              - heading "aplicación de la Matriz IPERC y sistema simplificado" [level=3] [ref=e431]
+              - generic [ref=e433]:
+                - img [ref=e438]
+                - generic [ref=e440]:
+                  - generic [ref=e442]: EPISTEMUS
+                  - generic [ref=e444]: https://epistemus.unison.mx › epistemus › article › view
+            - button "Acerca de este resultado" [ref=e447] [cursor=pointer]:
+              - img [ref=e450]
+          - generic [ref=e453]:
+            - generic [ref=e454]: por GR Vega · 2025 —
+            - generic [ref=e455]:
+              - text: ...
+              - emphasis [ref=e456]: UNMSM
+              - text: ",”"
+              - emphasis [ref=e457]: Revista de la Facultad de Ingeniería
+              - text: Industrial, vol. 19, no ... Los
+              - emphasis [ref=e458]: autores
+              - text: son los legítimos titulares de los derechos de ...
+        - generic [ref=e462]:
+          - generic [ref=e465]:
+            - link "(PDF) Identificación de Peligros y Evaluación y Control de ... ResearchGate https://www.researchgate.net › publication › 31242297..." [ref=e467] [cursor=pointer]:
+              - /url: https://www.researchgate.net/publication/312422979_Identificacion_de_Peligros_y_Evaluacion_y_Control_de_Riesgos_IPERC_en_la_miniplanta_de_hilanderia_y_tejeduria_de_la_Facultad_de_Ingenieria_Industrial_-_UNMSM
+              - heading "(PDF) Identificación de Peligros y Evaluación y Control de ..." [level=3] [ref=e468]
+              - generic [ref=e474]:
+                - generic [ref=e476]: ResearchGate
+                - generic [ref=e478]: https://www.researchgate.net › publication › 31242297...
+            - button "Acerca de este resultado" [ref=e481] [cursor=pointer]:
+              - img [ref=e484]
+          - generic [ref=e488]:
+            - text: Facultad de Ingeniería Industrial de la
+            - emphasis [ref=e489]: UNMSM
+            - text: ". E-mail: tcsixto_23@hotmail.com."
+            - emphasis [ref=e490]: Revista de la Facultad de Ingeniería
+            - text: "Industrial. 19(1): 109-116 (2016)"
+            - emphasis [ref=e491]: UNMSM
+            - text: .
+        - generic [ref=e495]:
+          - generic [ref=e498]:
+            - link "conclusiones URBE https://virtual.urbe.edu › tesispub › conclu" [ref=e500] [cursor=pointer]:
+              - /url: https://virtual.urbe.edu/tesispub/0102696/conclu.pdf
+              - heading "conclusiones" [level=3] [ref=e501]
+              - generic [ref=e503]:
+                - img [ref=e508]
+                - generic [ref=e510]:
+                  - generic [ref=e512]: URBE
+                  - generic [ref=e514]: https://virtual.urbe.edu › tesispub › conclu
+            - generic [ref=e515]:
+              - generic:
+                - generic: PDF
+            - button "Acerca de este resultado" [ref=e518] [cursor=pointer]:
+              - img [ref=e521]
+          - generic [ref=e525]:
+            - emphasis [ref=e526]: Revista de la Facultad de Ingeniería
+            - text: ". Industrial. 17(2): 56-66 (2014)"
+            - emphasis [ref=e527]: UNMSM
+            - text: ". ISSN: 1560-9146 (Impreso) /. ISSN: 1810-9993 (Electrónico). Tirado Valero, Ivanna ..."
+      - navigation [ref=e530]:
+        - heading "Navegación de páginas" [level=1] [ref=e531]
+        - text: "1"
+        - link "Page 2" [ref=e534] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=10&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAE
+          - text: "2"
+        - link "Page 3" [ref=e536] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=20&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAG
+          - text: "3"
+        - link "Page 4" [ref=e538] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=30&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAI
+          - text: "4"
+        - link "Page 5" [ref=e540] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=40&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAK
+          - text: "5"
+        - link "Page 6" [ref=e542] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=50&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAM
+          - text: "6"
+        - link "Page 7" [ref=e544] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=60&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAO
+          - text: "7"
+        - link "Page 8" [ref=e546] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=70&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAQ
+          - text: "8"
+        - link "Page 9" [ref=e548] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=80&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAS
+          - text: "9"
+        - link "Page 10" [ref=e550] [cursor=pointer]:
+          - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=90&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8tMDegQIKhAU
+          - text: "10"
+        - heading "Siguiente" [level=2] [ref=e552]:
+          - link "Siguiente" [ref=e553] [cursor=pointer]:
+            - /url: /search?q=%22revista+de+la+facultad+de+ingenieria%22+unmsm+formato+autor+guia+autores&sca_esv=8841194606cfa8ed&ei=9WhYaqfRDbC65OUPoY2l0QE&start=10&sa=N&sstk=AU9db-CZenMfjbcye3PxJLUjnig3w1DHalyX-oQYKySJgbYegUpQ_lmJM2CSTJp3lLhxHEgL7ksiuPaov8x8tFNTTvqz30OMLHpxeg&ved=2ahUKEwjnn5-8uNaVAxUwHbkGHaFGKRoQ8NMDegQIKhAW
+            - generic [ref=e555]: Siguiente
+      - navigation
+    - contentinfo [ref=e556]:
+      - heading "Vínculos a pie de página" [level=1] [ref=e557]
+      - generic [ref=e561]:
+        - generic [ref=e563]:
+          - text: Perú
+          - generic [ref=e565]:
+            - button "15302, Lima - A través de tu dirección IP" [ref=e567] [cursor=pointer]:
+              - generic [ref=e568]: 15302, Lima
+              - generic [ref=e570]:
+                - text: "-"
+                - generic [ref=e571]: A través de tu dirección IP
+            - text: "-"
+            - button "Actualizar ubicación" [ref=e573] [cursor=pointer]: Actualizar ubicación
+        - generic [ref=e576]:
+          - link "Ayuda" [ref=e577] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=es-PE&fg=1
+          - link "Enviar comentarios" [ref=e578] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidad" [ref=e579] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=es-PE&fg=1
+          - link "Condiciones" [ref=e580] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=es-PE&fg=1

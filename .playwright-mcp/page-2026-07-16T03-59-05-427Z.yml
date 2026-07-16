@@ -1,0 +1,113 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - button [ref=e4] [cursor=pointer]
+    - link "Página principal" [ref=e6] [cursor=pointer]:
+      - /url: /schhp?hl=es&as_sdt=0,5
+    - generic [ref=e9]:
+      - textbox "Buscar" [ref=e11]: "\"User-centric AI: evaluating the usability of generative AI\" Alqahtani"
+      - button "Buscar" [ref=e12] [cursor=pointer]
+    - link "Iniciar sesión" [ref=e16] [cursor=pointer]:
+      - /url: https://accounts.google.com/Login?hl=es&continue=https://scholar.google.com/scholar%3Fq%3D%2522User-centric%2BAI%253A%2Bevaluating%2Bthe%2Busability%2Bof%2Bgenerative%2BAI%2522%2BAlqahtani
+  - generic [ref=e17]:
+    - generic [ref=e21]: Artículos
+    - generic [ref=e23]:
+      - link "Mi perfil" [ref=e24] [cursor=pointer]:
+        - /url: /citations?hl=es
+        - generic [ref=e26]: Mi perfil
+      - link "Mi biblioteca" [ref=e27] [cursor=pointer]:
+        - /url: /scholar?scilib=1&scioq=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+        - generic [ref=e29]: Mi biblioteca
+  - generic [ref=e30]:
+    - navigation [ref=e31]:
+      - generic [ref=e32]:
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "Cualquier momento" [ref=e36] [cursor=pointer]:
+              - /url: /scholar?q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+          - listitem [ref=e37]:
+            - link "Desde 2026" [ref=e38] [cursor=pointer]:
+              - /url: /scholar?as_ylo=2026&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+          - listitem [ref=e39]:
+            - link "Desde 2025" [ref=e40] [cursor=pointer]:
+              - /url: /scholar?as_ylo=2025&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+          - listitem [ref=e41]:
+            - link "Desde 2022" [ref=e42] [cursor=pointer]:
+              - /url: /scholar?as_ylo=2022&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+          - listitem [ref=e43]:
+            - link "Intervalo específico..." [ref=e44] [cursor=pointer]:
+              - /url: javascript:void(0)
+        - list [ref=e45]:
+          - listitem [ref=e46]:
+            - link "Ordenar por relevancia" [ref=e47] [cursor=pointer]:
+              - /url: /scholar?hl=es&as_sdt=0,5&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani
+          - listitem [ref=e48]:
+            - link "Ordenar por fecha" [ref=e49] [cursor=pointer]:
+              - /url: /scholar?hl=es&as_sdt=0,5&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&scisbd=1
+        - list [ref=e50]:
+          - listitem [ref=e51]:
+            - link "Cualquier idioma" [ref=e52] [cursor=pointer]:
+              - /url: /scholar?lr=&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+          - listitem [ref=e53]:
+            - link "Buscar solo páginas en español" [ref=e54] [cursor=pointer]:
+              - /url: /scholar?lr=lang_es&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+        - list [ref=e55]:
+          - listitem [ref=e56]:
+            - link "Cualquier tipo" [ref=e57] [cursor=pointer]:
+              - /url: /scholar?q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+          - listitem [ref=e58]:
+            - link "Artículos de revisión" [ref=e59] [cursor=pointer]:
+              - /url: /scholar?q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5&as_rr=1
+        - list [ref=e60]:
+          - listitem [ref=e61]:
+            - checkbox "incluir patentes" [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]: incluir patentes
+          - listitem [ref=e66]:
+            - checkbox "incluir citas" [checked] [ref=e67] [cursor=pointer]:
+              - generic [ref=e68]: incluir citas
+    - main [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e74]:
+          - link "[PDF] peerj.com" [ref=e78] [cursor=pointer]:
+            - /url: https://peerj.com/articles/cs-2421.pdf
+          - generic [ref=e79]:
+            - 'heading "User-centric AI: evaluating the usability of generative AI applications through user reviews on app stores" [level=3] [ref=e80]':
+              - 'link "User-centric AI: evaluating the usability of generative AI applications through user reviews on app stores" [ref=e81] [cursor=pointer]':
+                - /url: https://peerj.com/articles/cs-2421/
+            - generic [ref=e82]:
+              - link "R Alabduljabbar" [ref=e84] [cursor=pointer]:
+                - /url: /citations?user=ZtV2e50AAAAJ&hl=es&oi=sra
+              - text: PeerJ Computer Science, 2024•peerj.com
+            - generic [ref=e88]:
+              - generic [ref=e89]: Abstract
+              - generic [ref=e90]:
+                - generic [ref=e93]: "This article presents a usability evaluation and comparison of generative AI applications through the analysis of user reviews from popular digital marketplaces, specifically Apple’s App Store and Google Play. The study aims to bridge the research gap in real-world usability assessments of generative AI tools. A total of 11,549 reviews were extracted and analyzed from January to March 2024 for five generative AI apps: ChatGPT, Bing AI, Microsoft Copilot, Gemini AI, and Da Vinci AI. The dataset has been made publicly available, allowing for further analysis by other researchers. The evaluation follows ISO 9241 usability standards, focusing on effectiveness, efficiency, and user satisfaction. This study is believed to be the first usability evaluation for generative AI applications using user reviews across digital marketplaces. The results show that ChatGPT achieved the highest compound usability scores among Android and iOS users, with scores of 0.504 and 0.462, respectively. Conversely, Gemini AI scored the lowest among Android apps at 0.016, and Da Vinci AI had the lowest among iOS apps at 0.275. Satisfaction scores were critical in usability assessments, with ChatGPT obtaining the highest rates of 0.590 for Android and 0.565 for iOS, while Gemini AI had the lowest satisfaction rate at− 0.138 for Android users. The findings revealed usability issues related to ease of use, functionality, and reliability in generative AI tools, providing valuable insights from user opinions and feedback. Based on the analysis, actionable recommendations were proposed to enhance the usability of generative AI tools, aiming to address identified usability issues and improve the overall user experience. This study contributes to a deeper understanding of user experiences and offers valuable guidance for enhancing the usability of generative AI applications."
+                - generic [ref=e95]: peerj.com
+              - link "Mostrar más" [ref=e97] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - text: Mostrar más
+            - generic [ref=e99]:
+              - button "Guardar" [ref=e100] [cursor=pointer]:
+                - img [ref=e101]
+                - text: Guardar
+              - button "Citar" [ref=e103] [cursor=pointer]:
+                - img [ref=e104]
+                - text: Citar
+              - link "Citado por 28" [ref=e106] [cursor=pointer]:
+                - /url: /scholar?cites=4526285616209692067&as_sdt=2005&sciodt=0,5&hl=es
+              - link "Artículos relacionados" [ref=e107] [cursor=pointer]:
+                - /url: /scholar?q=related:o4UjYsmY0D4J:scholar.google.com/&scioq=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+              - link "Las 5 versiones" [ref=e108] [cursor=pointer]:
+                - /url: /scholar?cluster=4526285616209692067&hl=es&as_sdt=0,5
+              - button "Más" [ref=e109] [cursor=pointer]:
+                - img [ref=e110]
+        - generic [ref=e113]:
+          - text: Mejor resultado para esta búsqueda.
+          - link "Ver todos los resultados" [ref=e114] [cursor=pointer]:
+            - /url: /scholar?lookup=0&q=%22User-centric+AI:+evaluating+the+usability+of+generative+AI%22+Alqahtani&hl=es&as_sdt=0,5
+  - contentinfo [ref=e115]:
+    - generic [ref=e116]:
+      - link "Privacidad" [ref=e117] [cursor=pointer]:
+        - /url: //www.google.com/intl/es/policies/privacy/
+      - link "Términos" [ref=e118] [cursor=pointer]:
+        - /url: //www.google.com/intl/es/policies/terms/
+      - button "Ayuda" [ref=e119] [cursor=pointer]

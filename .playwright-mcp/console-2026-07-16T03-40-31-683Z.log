@@ -1,0 +1,17 @@
+[    1102ms] [LOG] Tealium Event tags from tealiumTagData will not be fired from JSP pages - UnExpected value for data4eventTags: [] @ https://ieeexplore.ieee.org/assets/dist/js/analytics/tealiumAnalytics.js?cv=20260714_00000:0
+[    1123ms] [LOG] No intialized handler @ https://service.seamlessaccess.org/ps_de7abba6197b1ec1abce.js:1
+[    1453ms] [WARNING] [GPT] Slot.setTargeting is deprecated, use Slot.setConfig({targeting: ...}) instead.
+https://goo.gle/gpt-message#171 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202607130101/pubads_impl.js:18
+[    1454ms] [WARNING] [GPT] PubAdsService.collapseEmptyDivs is deprecated, use googletag.setConfig({collapseDiv: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202607130101/pubads_impl.js:18
+[    1732ms] [WARNING] failed set a visitor_id to the iframe LS @ https://ieee.hum.works/js/main.js:0
+[    1754ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202607130101/pubads_impl.js:18
+[    2014ms] [ERROR] Attestation check for Shared Storage on https://www.googleadservices.com failed. @ https://www.googleadservices.com/pagead/managed/js/activeview/current/reach_worklet.html:0
+[    2022ms] [ERROR] Attestation check for Shared Storage on https://www.googleadservices.com failed. @ https://www.googleadservices.com/pagead/managed/js/activeview/current/reach_worklet.html:0
+[    2291ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://ieeexplore.ieee.org/favicon.ico:0
+[    2420ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ups.analytics.yahoo.com/ups/58813/fed?gpp_sid=-1&v=1&url=https%3A%2F%2Fieeexplore.ieee.org%2Fsearch%2Fsearchresult.jsp:0
+[    2599ms] [WARNING] Google Deploy of the SharedId library has been deprecated. Please select another option in the GAM UI. If you use Prebid, we suggest the Prebid.js UserId option. If you do not, you may configure GAM to allow Google to share a first party user identifier with OB and AB participants, which is either the publisherProvidedId or the __gads value when that is missing. @ https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js:0
+[    2674ms] [LOG] %cNovatiq: %c%s color:blue color:#997300 Novatiq core integration library version: 2.3.cdn @ https://cdn.fusion-platform.com/static/js/novatiq_gam_integration.min.js:0
+[    2878ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202607130101/pubads_impl.js:18

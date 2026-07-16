@@ -1,0 +1,303 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#main"
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]:
+            - link "Elsevier Logo" [ref=e9] [cursor=pointer]:
+              - /url: /home.uri?zone=header&origin=
+              - img [ref=e12]
+              - generic [ref=e14]: Elsevier Logo
+            - link "Scopus Preview Logo" [ref=e15] [cursor=pointer]:
+              - /url: /home.uri?zone=header&origin=
+              - img [ref=e18]
+              - generic [ref=e34]: Scopus Preview Logo
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - link "Author Search" [ref=e37] [cursor=pointer]:
+                - /url: /freelookup/form/author.uri?zone=TopNavBar&origin=NO%20ORIGIN%20DEFINED
+                - img [ref=e39]
+                - generic [ref=e41]: Author Search
+              - link "Sources" [ref=e42] [cursor=pointer]:
+                - /url: /sources.uri?zone=TopNavBar&origin=
+            - generic [ref=e44]:
+              - link "How can we help?" [ref=e46] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e48]
+                - generic [ref=e50]: How can we help?
+              - link "Brought to you by" [ref=e52] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e54]
+                - generic [ref=e56]: Brought to you by
+              - generic [ref=e57]:
+                - link "Create account" [ref=e58] [cursor=pointer]:
+                  - /url: /pages/signIn?referralUrl=https%3A%2F%2Fwww.scopus.com%2Fpages%2Fhome%3Fdisplay%3Dbasic
+                  - generic [ref=e59]: Create account
+                - button "Sign in" [ref=e60]:
+                  - generic [ref=e61]: Sign in
+      - main [ref=e62]:
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e69]:
+                - heading "Empowering research with the world's leading abstract and citation database" [level=1] [ref=e70]
+                - heading "Discover a comprehensive source of peer-reviewed literature and research indicators. Scopus supports scientific breakthroughs with data from 100 million+ research records." [level=2] [ref=e71]
+                - generic [ref=e72]:
+                  - link "Check access" [ref=e73] [cursor=pointer]:
+                    - /url: /pages/checkAccess?referralUrl=https%3A%2F%2Fwww.scopus.com%2Fpages%2Fhome%3Fdisplay%3Dbasic
+                    - generic [ref=e74]: Check access
+                  - link "Contact sales Contact sales (opens in a new window)" [ref=e75] [cursor=pointer]:
+                    - /url: https://www.elsevier.com/products/scopus/contact-us?utm_source=elsevier-infosite&utm_medium=referral&utm_campaign=alf_aq_da_10945385843
+                    - generic [ref=e76]:
+                      - text: Contact sales
+                      - img [ref=e78]
+                    - generic [ref=e80]: Contact sales (opens in a new window)
+              - img "Alt text preview image" [ref=e83]
+            - generic [ref=e84]:
+              - heading "Why Scopus?" [level=3] [ref=e85]
+              - generic [ref=e87]:
+                - generic [ref=e89]:
+                  - img "Alt text preview image" [ref=e90]
+                  - generic [ref=e91]:
+                    - heading "Increase research efficiency" [level=4] [ref=e92]:
+                      - strong [ref=e93]: Increase research efficiency
+                    - text: Stay ahead of the curve with tools like intuitive search, alerts, and impact metrics trackers.
+                - generic [ref=e95]:
+                  - img "Alt text preview image" [ref=e96]
+                  - generic [ref=e97]:
+                    - heading "Showcase author & organization impact" [level=4] [ref=e98]:
+                      - strong [ref=e99]: Showcase author & organization impact
+                    - text: Explore author and organization profiles with publications, h-index, citations & more.
+                - generic [ref=e101]:
+                  - img "Alt text preview image" [ref=e102]
+                  - generic [ref=e103]:
+                    - heading "Identify emerging trends" [level=4] [ref=e104]:
+                      - strong [ref=e105]: Identify emerging trends
+                    - text: Track citation patterns, keyword trends, and hot topics across disciplines.
+                - generic [ref=e107]:
+                  - img "Alt text preview image" [ref=e108]
+                  - generic [ref=e109]:
+                    - heading "Inform strategic research decisions" [level=4] [ref=e110]:
+                      - strong [ref=e111]: Inform strategic research decisions
+                    - text: Leverage Scopus’ metrics and analytics to inform strategic research decisions.
+                - generic [ref=e113]:
+                  - img "Alt text preview image" [ref=e114]
+                  - generic [ref=e115]:
+                    - heading "Explore journals, articles and author influence" [level=4] [ref=e116]:
+                      - strong [ref=e117]: Explore journals, articles and author influence
+                    - text: Discover the most impactful journals and influential researchers in your field.
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - heading "Try a limited version of Scopus" [level=3] [ref=e123]
+              - text: Discover authors, explore journals, and learn more before unlocking the full Scopus experience.
+            - link "Explore Scopus in Preview" [ref=e126] [cursor=pointer]:
+              - /url: /freelookup/form/author.uri
+              - generic [ref=e127]: Explore Scopus in Preview
+          - generic [ref=e128]:
+            - heading "Scopus by the numbers" [level=3] [ref=e129]
+            - generic [ref=e131]:
+              - generic [ref=e136]:
+                - generic [ref=e138]: 100 M+
+                - generic [ref=e140]: Documents
+              - generic [ref=e145]:
+                - generic [ref=e147]: 28,000+
+                - generic [ref=e149]: Journals
+              - generic [ref=e154]:
+                - generic [ref=e156]: 20 M+
+                - generic [ref=e158]: Author profiles
+              - generic [ref=e163]:
+                - generic [ref=e165]: 90,000+
+                - generic [ref=e167]: Organization profiles
+              - generic [ref=e172]:
+                - generic [ref=e174]: 7,000+
+                - generic [ref=e176]: Publishers
+          - generic [ref=e179]:
+            - heading "Designed to help organizations and researchers worldwide" [level=3] [ref=e180]
+            - generic [ref=e182]:
+              - generic [ref=e184]:
+                - paragraph [ref=e185]: “You can’t compare other products to Scopus — no other output metrics offer the same kind of depth and coverage. They are fantastic… it is the kind of information that administrators and the Office of Research seek all the time.”
+                - generic [ref=e186]:
+                  - img "User image" [ref=e187]
+                  - generic [ref=e188]:
+                    - generic [ref=e189]: Hector R. Perez-Gilbe
+                    - generic [ref=e190]: Health Sciences Research Librarian, UC Irvine, U.S.
+              - generic [ref=e192]:
+                - paragraph [ref=e193]: “We explain to [students/researchers] that they have an opportunity to make their profile shine…One way they can do that is by aiming for reputable titles indexed by databases like Scopus …Students and researchers walk away understanding that Scopus is a tool to help them discover and present work colleagues can access.”
+                - generic [ref=e194]:
+                  - img "User image" [ref=e195]
+                  - generic [ref=e196]:
+                    - generic [ref=e197]: Bruce Abbott
+                    - generic [ref=e198]: Assoc. Dean, McGoogan Health Sciences Library, UNMC, U.S.
+              - generic [ref=e200]:
+                - paragraph [ref=e201]: “Many of today’s research questions have to do with public health, particularly with public policy and informatics. This creates an overlap between computer science, informatics and health sciences... having a database as inclusive and interdisciplinary as Scopus is invaluable to us.”
+                - generic [ref=e202]:
+                  - img "User image" [ref=e203]
+                  - generic [ref=e204]:
+                    - generic [ref=e205]: Emily Gleen
+                    - generic [ref=e206]: Health Sciences Librarian at Blaisdell Medical Library, UC Davis Health, U.S.
+          - generic [ref=e207]:
+            - strong [ref=e209]: Explore Scopus content
+            - generic [ref=e211]:
+              - generic [ref=e214]:
+                - heading "Scopus content is curated by the independent Scopus Content Selection and Advisory Board (CSAB)" [level=3] [ref=e215]
+                - link "More about the CSAB and Scopus content quality Learn more about (opens in a new window)" [ref=e216] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/products/scopus/content/content-selection-and-advisory-board?utm_source=elsevier-infosite&utm_medium=referral&utm_campaign=alf_aq_da_10945385843
+                  - generic [ref=e217]:
+                    - text: More about the CSAB and Scopus content quality
+                    - img [ref=e219]
+                  - generic [ref=e221]: Learn more about (opens in a new window)
+              - generic [ref=e224]:
+                - link "Scopus content coverage guide Learn more about (opens in a new window)" [ref=e225] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/products/scopus/content#0-content-coverage?utm_source=elsevier-infosite&utm_medium=referral&utm_campaign=alf_aq_da_10945385843
+                  - generic [ref=e226]:
+                    - text: Scopus content coverage guide
+                    - img [ref=e228]
+                  - generic [ref=e230]: Learn more about (opens in a new window)
+                - link "Scopus source title list Learn more about (opens in a new window)" [ref=e231] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/products/scopus/content#4-titles-on-scopus
+                  - generic [ref=e232]:
+                    - text: Scopus source title list
+                    - img [ref=e234]
+                  - generic [ref=e236]: Learn more about (opens in a new window)
+                - link "Scopus book title list Learn more about (opens in a new window)" [ref=e237] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/products/scopus/content#4-titles-on-scopus
+                  - generic [ref=e238]:
+                    - text: Scopus book title list
+                    - img [ref=e240]
+                  - generic [ref=e242]: Learn more about (opens in a new window)
+            - link "Explore Scopus in Preview" [ref=e244] [cursor=pointer]:
+              - /url: /freelookup/form/author.uri
+              - generic [ref=e245]: Explore Scopus in Preview
+          - generic [ref=e247]:
+            - heading "What is new in Scopus?" [level=3] [ref=e248]
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - 'heading "Introducing CiteScore 2024: A Comprehensive and Transparent Metric for Journal Impact" [level=4] [ref=e252]'
+                - link "Read more Learn more about (opens in a new window)" [ref=e253] [cursor=pointer]:
+                  - /url: https://blog.scopus.com/introducing-citescore-2024/
+                  - generic [ref=e254]:
+                    - text: Read more
+                    - img [ref=e256]
+                  - generic [ref=e258]: Learn more about (opens in a new window)
+              - generic [ref=e259]:
+                - heading "Introducing Scopus AI Research on the go features" [level=4] [ref=e260]
+                - link "Read more Learn more about (opens in a new window)" [ref=e261] [cursor=pointer]:
+                  - /url: https://blog.scopus.com/introducing-scopus-ai-research-on-the-go-features/
+                  - generic [ref=e262]:
+                    - text: Read more
+                    - img [ref=e264]
+                  - generic [ref=e266]: Learn more about (opens in a new window)
+              - generic [ref=e267]:
+                - heading "Scopus data crosses the 100 million item threshold!" [level=4] [ref=e268]
+                - link "Read more Learn more about (opens in a new window)" [ref=e269] [cursor=pointer]:
+                  - /url: https://blog.scopus.com/100-million-reasons-to-trust-scopus/
+                  - generic [ref=e270]:
+                    - text: Read more
+                    - img [ref=e272]
+                  - generic [ref=e274]: Learn more about (opens in a new window)
+      - contentinfo [ref=e275]:
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - heading "About Scopus" [level=3] [ref=e280]
+            - list [ref=e281]:
+              - listitem [ref=e282]:
+                - link "What is Scopus Learn more about Scopus (opens in a new window)" [ref=e283] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/products/scopus?dgcid=RN_AGCM_Sourced_300005030
+                  - generic [ref=e284]: What is Scopus
+                  - generic [ref=e285]: Learn more about Scopus (opens in a new window)
+              - listitem [ref=e286]:
+                - link "Content coverage Learn more about Scopus' content coverage (opens in a new window)" [ref=e287] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/products/scopus/content?dgcid=RN_AGCM_Sourced_300005030
+                  - generic [ref=e288]: Content coverage
+                  - generic [ref=e289]: Learn more about Scopus' content coverage (opens in a new window)
+              - listitem [ref=e290]:
+                - link "Scopus blog Read the Scopus Blog (opens in a new window)" [ref=e291] [cursor=pointer]:
+                  - /url: https://blog.scopus.com/
+                  - generic [ref=e292]: Scopus blog
+                  - generic [ref=e293]: Read the Scopus Blog (opens in a new window)
+              - listitem [ref=e294]:
+                - link "Scopus API Learn more about Scopus API's (opens in a new window)" [ref=e295] [cursor=pointer]:
+                  - /url: https://dev.elsevier.com/
+                  - generic [ref=e296]: Scopus API
+                  - generic [ref=e297]: Learn more about Scopus API's (opens in a new window)
+              - listitem [ref=e298]:
+                - link "Privacy matters View privacy matters page (opens in a new window)" [ref=e299] [cursor=pointer]:
+                  - /url: https://www.elsevier.com/legal/privacy-policy?dgcid=RN_AGCM_Sourced_300005030
+                  - generic [ref=e300]: Privacy matters
+                  - generic [ref=e301]: View privacy matters page (opens in a new window)
+          - generic [ref=e302]:
+            - heading "Language" [level=3] [ref=e303]
+            - list [ref=e304]:
+              - listitem [ref=e305]:
+                - button "日本語版を表示する 日本語版を表示する" [ref=e306]:
+                  - generic [ref=e307]: 日本語版を表示する
+                  - generic [ref=e308]: 日本語版を表示する
+              - listitem [ref=e309]:
+                - button "查看简体中文版本 查看简体中文版本" [ref=e310]:
+                  - generic [ref=e311]: 查看简体中文版本
+                  - generic [ref=e312]: 查看简体中文版本
+              - listitem [ref=e313]:
+                - button "查看繁體中文版本 查看繁體中文版本" [ref=e314]:
+                  - generic [ref=e315]: 查看繁體中文版本
+                  - generic [ref=e316]: 查看繁體中文版本
+              - listitem [ref=e317]:
+                - button "Просмотр версии на русском языке Просмотр версии на русском языке" [ref=e318]:
+                  - generic [ref=e319]: Просмотр версии на русском языке
+                  - generic [ref=e320]: Просмотр версии на русском языке
+          - generic [ref=e321]:
+            - heading "Customer Service" [level=3] [ref=e322]
+            - list [ref=e323]:
+              - listitem [ref=e324]:
+                - link "Help View Scopus help files (opens in a new window)" [ref=e325] [cursor=pointer]:
+                  - /url: /standard/contactUs.uri?pageOrigin=footer
+                  - generic [ref=e326]: Help
+                  - generic [ref=e327]: View Scopus help files (opens in a new window)
+              - listitem [ref=e328]:
+                - link "Tutorials Select to view tutorials (opens in a new window)" [ref=e329] [cursor=pointer]:
+                  - /url: https://service.elsevier.com/app/answers/detail/a_id/14799/supporthub/scopus/
+                  - generic [ref=e330]: Tutorials
+                  - generic [ref=e331]: Select to view tutorials (opens in a new window)
+              - listitem [ref=e332]:
+                - link "Contact us Contact us (opens in a new window)" [ref=e333] [cursor=pointer]:
+                  - /url: https://service.elsevier.com/app/overview/scopus/
+                  - generic [ref=e334]: Contact us
+                  - generic [ref=e335]: Contact us (opens in a new window)
+        - separator [ref=e336]
+        - generic [ref=e338]:
+          - link "Elsevier Go to the Elsevier site (opens in a new window)" [ref=e339] [cursor=pointer]:
+            - /url: https://www.elsevier.com/?dgcid=RN_AGCM_Sourced_300005030
+            - img "Elsevier" [ref=e341]
+            - generic [ref=e342]: Go to the Elsevier site (opens in a new window)
+          - generic [ref=e343]:
+            - generic [ref=e344]:
+              - link "Terms and conditions View the terms and conditions of Elsevier (opens in a new window)" [ref=e345] [cursor=pointer]:
+                - /url: https://www.elsevier.com/legal/elsevier-website-terms-and-conditions?dgcid=RN_AGCM_Sourced_300005030
+                - generic [ref=e346]:
+                  - text: Terms and conditions
+                  - img [ref=e348]
+                - generic [ref=e350]: View the terms and conditions of Elsevier (opens in a new window)
+              - link "Privacy policy View the privacy policy of Elsevier (opens in a new window)" [ref=e351] [cursor=pointer]:
+                - /url: https://www.elsevier.com/legal/privacy-policy?dgcid=RN_AGCM_Sourced_300005030
+                - generic [ref=e352]:
+                  - text: Privacy policy
+                  - img [ref=e354]
+                - generic [ref=e356]: View the privacy policy of Elsevier (opens in a new window)
+              - button "Cookies settings View the Cookie setting preferences" [ref=e357]:
+                - generic [ref=e358]: Cookies settings
+                - generic [ref=e359]: View the Cookie setting preferences
+            - generic [ref=e361]:
+              - text: "All content on this site: Copyright © 2026"
+              - link "Elsevier B.V. Go to the Elsevier site (opens in a new window)" [ref=e362] [cursor=pointer]:
+                - /url: https://www.elsevier.com?dgcid=RN_AGCM_Sourced_300005030
+                - generic [ref=e363]:
+                  - text: Elsevier B.V.
+                  - img [ref=e365]
+                - generic [ref=e367]: Go to the Elsevier site (opens in a new window)
+              - text: ", its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply."
+          - link "RELX Group Go to RELX Group Homepage (Opens in a new window)" [ref=e369] [cursor=pointer]:
+            - /url: http://www.relx.com
+            - img "RELX Group" [ref=e370]
+            - generic [ref=e371]: Go to RELX Group Homepage (Opens in a new window)
+  - alert [ref=e372]

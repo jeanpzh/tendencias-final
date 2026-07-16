@@ -1,0 +1,21 @@
+- generic [ref=e4]:
+  - link [ref=e6] [cursor=pointer]:
+    - /url: /
+    - img [ref=e7]
+  - link "sci hub" [ref=e8] [cursor=pointer]:
+    - /url: /
+    - text: sci
+    - text: hub
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]: "The Chatbot Usability Scale: the Design and Pilot of a Usability Scale for Interaction with AI-Based Conversational Agents"
+      - generic [ref=e12]:
+        - generic [ref=e13]: Personal and Ubiquitous Computing,
+        - generic [ref=e14]: "2021"
+    - link "..." [ref=e17] [cursor=pointer]:
+      - /url: /meta/10.1007/s00779-021-01582-9
+    - generic [ref=e18] [cursor=pointer]: "!"
+    - link [ref=e20] [cursor=pointer]:
+      - /url: /storage/2024/8839/1095f71bd220c24be62c9ff18cf7cf4642c6ab1f8b4943857b97058a623a4e3d/borsci2021.pdf
+    - link "↗" [ref=e21] [cursor=pointer]:
+      - /url: /similar/10.1007/s00779-021-01582-9

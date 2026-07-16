@@ -1,0 +1,38 @@
+- generic [ref=e1]:
+  - dialog "Banner de consentimiento de cookies" [ref=e2]:
+    - button "Cerrar este diálogo" [active] [ref=e3] [cursor=pointer]:
+      - img "Cerrar este diálogo" [ref=e4]
+    - generic [ref=e5]:
+      - generic [ref=e6]: "Este sitio web utiliza tecnologías como cookies para habilitar la funcionalidad esencial del sitio, así como para analítica, personalización y publicidad dirigida. Para obtener más información, consulte el siguiente enlace:"
+      - link "Política de privacidad" [ref=e7] [cursor=pointer]:
+        - /url: https://allenai.org/privacy-policy/2025-02-19
+    - button "Administrar preferencias" [ref=e9] [cursor=pointer]
+  - generic [ref=e11]:
+    - generic [ref=e13]:
+      - link "Skip to search form" [ref=e14] [cursor=pointer]:
+        - /url: "#search-form"
+      - link "Skip to main content" [ref=e15] [cursor=pointer]:
+        - /url: "#main-content"
+      - link "Skip to account menu" [ref=e16] [cursor=pointer]:
+        - /url: "#account-menu"
+      - banner [ref=e17]:
+        - link "Homepage" [ref=e18] [cursor=pointer]:
+          - /url: /
+          - img "Semantic Scholar Semantic Scholar's Logo" [ref=e19]
+        - search [ref=e41]:
+          - generic [ref=e43]:
+            - searchbox "Search text" [ref=e44]: chatbot usability evaluation conversational agent user experience
+            - button "Submit" [disabled] [ref=e45]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: Search
+                - img [ref=e48]
+        - navigation [ref=e51]:
+          - generic [ref=e52]:
+            - button "Sign In" [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Sign In
+            - button "Create Free Account" [ref=e55] [cursor=pointer]:
+              - generic [ref=e56]: Create Free Account
+    - main [ref=e58]:
+      - generic [ref=e59]:
+        - img [ref=e60]
+        - text: Loading results
