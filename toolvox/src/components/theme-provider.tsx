@@ -116,10 +116,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     applyThemeToDOM(state);
   }, [state]);
 
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
   return (
     <ThemeContext.Provider
       value={{ ...state, setDark, setFontSize, setFontFamily, setAccentColor, applyAll }}
