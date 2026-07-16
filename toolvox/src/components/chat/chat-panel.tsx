@@ -2,11 +2,11 @@
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useChat } from "@ai-sdk/react";
+import { MessageSquare, Plus, Trash2, PanelLeftClose, PanelLeft } from "lucide-react";
 import { Message } from "./message";
 import { ChatInput } from "./chat-input";
 import { DEMOS, type DemoId } from "@/lib/constants";
-import { ModelSelector } from "@/components/model-selector";
-import { ApiUsage } from "@/components/api-usage";
+import { cn } from "@/lib/utils";
 import {
   saveChat,
   saveMessage,
@@ -14,7 +14,6 @@ import {
   getChatsByDemo,
   deleteChat,
   type StoredChat,
-  type StoredMessage,
 } from "@/lib/storage";
 
 interface ChatPanelProps {
@@ -27,9 +26,10 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
   const [chatId] = useState(() => `${demoId}-${Date.now()}`);
   const [chatHistory, setChatHistory] = useState<StoredChat[]>([]);
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
-  const [loadedMessages, setLoadedMessages] = useState<any[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedModel, setSelectedModel] = useState("tencent/hy3:free");
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   const demo = DEMOS.find((d) => d.id === (demoId as DemoId));
   const suggestions = demo?.suggestions ?? [];
@@ -40,7 +40,6 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
 
   const isLoading = status === "submitted" || status === "streaming";
 
-  // Load chat history on mount
   useEffect(() => {
     async function load() {
       try {
@@ -52,7 +51,6 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
     load();
   }, [demoId]);
 
-  // Auto-scroll to bottom
   useEffect(() => {
     if (scrollRef.current) {
       requestAnimationFrame(() => {
@@ -64,7 +62,6 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
     }
   }, [messages, status]);
 
-  // Save messages to IndexedDB when they change
   const persistMessages = useCallback(
     async (chatIdParam: string, msgs: any[]) => {
       try {
@@ -85,8 +82,8 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
 
   const handleSend = async (message: string) => {
     const currentChatId = activeChatId || chatId;
+    setMobileSidebarOpen(false);
 
-    // Create chat record on first message
     if (!activeChatId) {
       const chat: StoredChat = {
         id: chatId,
@@ -106,7 +103,6 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
     );
   };
 
-  // Persist assistant messages after they complete
   useEffect(() => {
     if (messages.length > 0 && activeChatId) {
       persistMessages(activeChatId, messages);
@@ -115,6 +111,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
 
   const loadChat = async (chat: StoredChat) => {
     setActiveChatId(chat.id);
+    setMobileSidebarOpen(false);
     try {
       const storedMessages = await getMessagesByChat(chat.id);
       const uiMessages = storedMessages.map((m) => ({
@@ -132,6 +129,7 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
   const handleNewChat = () => {
     setActiveChatId(null);
     setMessages([]);
+    setMobileSidebarOpen(false);
   };
 
   const handleDeleteChat = async (chat: StoredChat) => {
@@ -145,106 +143,160 @@ export function ChatPanel({ demoId, systemPrompt }: ChatPanelProps) {
     } catch {}
   };
 
-  return (
+  const sidebarContent = (
     <div className="flex flex-col h-full">
-      {/* Chat history tabs */}
-      {chatHistory.length > 0 && (
-        <div className="border-b bg-muted/30 px-4 py-2 shrink-0">
-          <div className="flex items-center gap-2 max-w-3xl mx-auto">
+      <div className="p-3 border-b border-border">
+        <button
+          onClick={handleNewChat}
+          className="w-full flex items-center justify-center gap-2 rounded-lg border border-border bg-muted/50 px-3 py-2 text-xs font-medium hover:bg-muted transition-colors"
+        >
+          <Plus className="h-3.5 w-3.5" />
+          Nueva conversación
+        </button>
+      </div>
+      <div className="flex-1 overflow-y-auto p-2 space-y-1 scrollbar-thin">
+        {chatHistory.map((chat) => (
+          <div
+            key={chat.id}
+            className={cn(
+              "group flex items-center gap-2 rounded-lg px-3 py-2.5 text-xs cursor-pointer transition-colors",
+              activeChatId === chat.id
+                ? "bg-primary/10 text-foreground border border-primary/20"
+                : "hover:bg-muted text-muted-foreground"
+            )}
+            onClick={() => loadChat(chat)}
+          >
+            <MessageSquare className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate flex-1">{chat.title}</span>
             <button
-              onClick={handleNewChat}
-              className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDeleteChat(chat);
+              }}
+              className="opacity-0 group-hover:opacity-100 hover:text-destructive transition-opacity shrink-0"
             >
-              + Nueva
+              <Trash2 className="h-3 w-3" />
             </button>
-            <div className="flex-1 overflow-x-auto flex gap-2 scrollbar-thin">
-              {chatHistory.map((chat) => (
-                <div
-                  key={chat.id}
-                  className={`group flex items-center gap-1 rounded-full border px-3 py-1 text-xs cursor-pointer shrink-0 transition-colors ${
-                    activeChatId === chat.id
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "hover:bg-muted"
-                  }`}
-                  onClick={() => loadChat(chat)}
-                >
-                  <span className="truncate max-w-[120px]">{chat.title}</span>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleDeleteChat(chat);
-                    }}
-                    className="opacity-0 group-hover:opacity-100 text-[10px] hover:text-destructive transition-opacity ml-1"
-                  >
-                    x
-                  </button>
-                </div>
-              ))}
-            </div>
           </div>
+        ))}
+        {chatHistory.length === 0 && (
+          <p className="text-center text-[11px] text-muted-foreground/50 py-4">
+            Sin conversaciones
+          </p>
+        )}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="flex h-full">
+      {/* Desktop sidebar */}
+      <div
+        className={cn(
+          "hidden md:flex flex-col border-r border-border bg-card/50 transition-all duration-300 shrink-0",
+          sidebarOpen ? "w-64" : "w-0 overflow-hidden"
+        )}
+      >
+        {sidebarOpen && sidebarContent}
+      </div>
+
+      {/* Mobile sidebar overlay */}
+      {mobileSidebarOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex">
+          <div
+            className="w-72 bg-card border-r border-border h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {sidebarContent}
+          </div>
+          <div
+            className="flex-1 bg-black/50"
+            onClick={() => setMobileSidebarOpen(false)}
+          />
         </div>
       )}
 
-      {/* Messages area */}
-      <div
-        ref={scrollRef}
-        className="flex-1 overflow-y-auto"
-      >
-        <div className="max-w-3xl mx-auto py-6 px-4 space-y-4 min-h-full">
-          {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center h-[60vh] text-center animate-fade-in">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-violet-500/20">
-                <span className="text-2xl">💬</span>
-              </div>
-              <h2 className="text-xl font-semibold mb-2">
-                ¡Hola! Soy ToolVox
-              </h2>
-              <p className="text-sm text-muted-foreground max-w-md mb-6">
-                Escribe lo que necesites y generaré componentes interactivos
-                en tiempo real. Prueba una de estas sugerencias:
-              </p>
-              <div className="flex flex-wrap gap-2 justify-center max-w-lg">
-                {suggestions.map((suggestion) => (
-                  <button
-                    key={suggestion}
-                    onClick={() => handleSend(suggestion)}
-                    className="rounded-full border bg-muted/50 px-3 py-1.5 text-xs hover:bg-muted hover:border-primary/50 transition-all text-left"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-          {messages.map((message) => (
-            <Message key={message.id} message={message} />
-          ))}
+      {/* Main chat area */}
+      <div className="flex-1 flex flex-col min-w-0 h-full">
+        {/* Mobile sidebar toggle */}
+        <div className="md:hidden flex items-center gap-2 px-3 py-2 border-b border-border">
+          <button
+            onClick={() => setMobileSidebarOpen(true)}
+            className="p-1.5 rounded-lg hover:bg-muted transition-colors"
+          >
+            <PanelLeft className="h-4 w-4" />
+          </button>
+          <span className="text-xs font-medium text-muted-foreground truncate">
+            {chatHistory.find((c) => c.id === activeChatId)?.title || "Nueva conversación"}
+          </span>
+        </div>
 
-          {/* Typing indicator */}
-          {status === "submitted" && (
-            <div className="flex gap-3 animate-fade-in">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="bg-muted rounded-xl rounded-bl-sm px-4 py-3">
-                <div className="flex items-center gap-1.5">
-                  <div className="flex gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0s" }} />
-                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0.16s" }} />
-                    <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0.32s" }} />
-                  </div>
-                  <span className="text-xs text-muted-foreground ml-1">Pensando...</span>
+        {/* Desktop sidebar toggle */}
+        <div className="hidden md:flex items-center px-3 py-1.5 border-b border-border">
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground"
+          >
+            {sidebarOpen ? (
+              <PanelLeftClose className="h-4 w-4" />
+            ) : (
+              <PanelLeft className="h-4 w-4" />
+            )}
+          </button>
+        </div>
+
+        {/* Messages */}
+        <div ref={scrollRef} className="flex-1 overflow-y-auto">
+          <div className="max-w-3xl mx-auto py-6 px-4 space-y-4 min-h-full">
+            {messages.length === 0 && (
+              <div className="flex flex-col items-center justify-center h-[60vh] text-center animate-fade-in">
+                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-violet-500/20">
+                  <span className="text-2xl">💬</span>
+                </div>
+                <h2 className="text-xl font-semibold mb-2">¡Hola! Soy ToolVox</h2>
+                <p className="text-sm text-muted-foreground max-w-md mb-6">
+                  Escribe lo que necesites y generaré componentes interactivos
+                  en tiempo real.
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center max-w-lg">
+                  {suggestions.map((suggestion) => (
+                    <button
+                      key={suggestion}
+                      onClick={() => handleSend(suggestion)}
+                      className="rounded-full border bg-muted/50 px-3 py-1.5 text-xs hover:bg-muted hover:border-primary/50 transition-all text-left"
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
                 </div>
               </div>
-            </div>
-          )}
+            )}
+            {messages.map((message) => (
+              <Message key={message.id} message={message} />
+            ))}
+            {status === "submitted" && (
+              <div className="flex gap-3 animate-fade-in">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="bg-muted rounded-xl rounded-bl-sm px-4 py-3">
+                  <div className="flex items-center gap-1.5">
+                    <div className="flex gap-1">
+                      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0s" }} />
+                      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0.16s" }} />
+                      <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/60 animate-typing-dot" style={{ animationDelay: "0.32s" }} />
+                    </div>
+                    <span className="text-xs text-muted-foreground ml-1">Pensando...</span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
+        <ChatInput onSubmit={handleSend} isLoading={isLoading} />
       </div>
-
-      {/* Input area */}
-      <ChatInput onSubmit={handleSend} isLoading={isLoading} />
     </div>
   );
 }

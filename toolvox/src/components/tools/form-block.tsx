@@ -126,7 +126,7 @@ export function FormBlock({
                     type="checkbox"
                     checked={formData[field.name] ?? false}
                     onChange={(e) => handleChange(field.name, e.target.checked)}
-                    className="h-4 w-4 rounded border-gray-300"
+                    className="h-4 w-4 rounded border-border accent-primary"
                   />
                   {field.placeholder}
                 </label>
@@ -158,7 +158,7 @@ export function FormBlock({
                     step={field.step ?? 1}
                     value={formData[field.name] ?? field.min ?? 0}
                     onChange={(e) => handleChange(field.name, Number(e.target.value))}
-                    className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                    className="flex-1 h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
                   />
                   <span className="text-xs font-mono w-10 text-right">
                     {formData[field.name] ?? field.min ?? 0}

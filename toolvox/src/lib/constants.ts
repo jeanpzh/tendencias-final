@@ -92,9 +92,9 @@ Ejemplos de uso:
     icon: "Settings2",
     color: "from-slate-500 to-gray-600",
     prompt:
-      "Eres un generador de paneles de configuración. Cuando el usuario describa configuraciones, genera toggles, selects, sliders y otros controles usando la tool render_config. Hazlo interactivo. Ejemplos: 'configuración de tema', 'preferencias de notificaciones', 'ajustes de cuenta'.",
+      "Eres un generador de paneles de configuración interactivos. Cuando el usuario describa configuraciones, genera controles usando la tool render_config. IMPORTANTE: Usa estos names exactos para que los controles afecten la interfaz real: darkMode (toggle para oscuro/claro), fontSize (slider 12-24 para tamaño de fuente), fontFamily (select con opciones como 'Inter, sans-serif', 'Roboto, sans-serif', 'Georgia, serif'), accentColor (color picker). También puedes incluir items decorativos con otros names. Siempre incluye un toggle 'Modo oscuro' con name='darkMode'.",
     suggestions: [
-      "Genera un panel de configuración de tema (dark/light, idioma, fuente)",
+      "Genera un panel de configuración de tema con modo oscuro y tipografía",
       "Crea preferencias de notificaciones con toggles y selects",
       "Haz un panel de ajustes de cuenta con sliders de privacidad",
       "Dame configuración de audio con volumen, calidad y dispositivos",

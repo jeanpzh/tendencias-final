@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Settings2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
@@ -20,6 +20,58 @@ interface ConfigBlockProps {
   items: ConfigItem[];
 }
 
+function applyConfigChange(name: string, value: any) {
+  const root = document.documentElement;
+
+  switch (name) {
+    case "darkMode":
+    case "modo_color":
+    case "theme":
+      if (value === true || value === "dark" || value === "oscuro") {
+        root.classList.add("dark");
+        root.classList.remove("light");
+      } else if (value === false || value === "light" || value === "claro") {
+        root.classList.remove("dark");
+        root.classList.add("light");
+      }
+      break;
+    case "fontSize":
+    case "font_size":
+    case "tamano_fuente":
+      root.style.fontSize = `${value}px`;
+      break;
+    case "accentColor":
+    case "color_acento":
+      root.style.setProperty("--primary", value);
+      break;
+    case "fontFamily":
+    case "fuente":
+    case "tipografia":
+      root.style.setProperty("--font-sans", value);
+      break;
+    case "highContrast":
+    case "alto_contraste":
+      if (value) {
+        root.classList.add("high-contrast");
+      } else {
+        root.classList.remove("high-contrast");
+      }
+      break;
+    case "reduceMotion":
+    case "reducir_movimiento":
+      if (value) {
+        root.classList.add("reduce-motion");
+      } else {
+        root.classList.remove("reduce-motion");
+      }
+      break;
+    case "borderRadius":
+    case "esquinas_redondeadas":
+      root.style.setProperty("--radius", value ? "0.625rem" : "0rem");
+      break;
+  }
+}
+
 export function ConfigBlock({ title, description, items }: ConfigBlockProps) {
   const [config, setConfig] = useState<Record<string, any>>(() => {
     const initial: Record<string, any> = {};
@@ -29,12 +81,13 @@ export function ConfigBlock({ title, description, items }: ConfigBlockProps) {
     return initial;
   });
 
-  const handleChange = (name: string, value: any) => {
+  const handleChange = useCallback((name: string, value: any) => {
     setConfig((prev) => ({ ...prev, [name]: value }));
-  };
+    applyConfigChange(name, value);
+  }, []);
 
   return (
-    <Card className="animate-fade-in-up my-3">
+    <Card className="my-3">
       <CardHeader className="pb-3">
         <div className="flex items-center gap-2">
           <Settings2 className="h-4 w-4 text-muted-foreground" />
@@ -47,7 +100,7 @@ export function ConfigBlock({ title, description, items }: ConfigBlockProps) {
           {items.map((item) => (
             <div
               key={item.name}
-              className="flex items-center justify-between gap-4 py-2 border-b last:border-0"
+              className="flex items-center justify-between gap-4 py-2 border-b border-border last:border-0"
             >
               <label className="text-xs font-medium">{item.label}</label>
               {item.type === "toggle" ? (
@@ -83,9 +136,9 @@ export function ConfigBlock({ title, description, items }: ConfigBlockProps) {
                     max={item.max ?? 100}
                     value={config[item.name]}
                     onChange={(e) => handleChange(item.name, Number(e.target.value))}
-                    className="w-24 h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                    className="w-24 h-1.5 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
                   />
-                  <span className="text-xs font-mono w-8 text-right">
+                  <span className="text-xs font-mono w-8 text-right text-muted-foreground">
                     {config[item.name]}
                   </span>
                 </div>
@@ -94,7 +147,7 @@ export function ConfigBlock({ title, description, items }: ConfigBlockProps) {
                   type="color"
                   value={config[item.name]}
                   onChange={(e) => handleChange(item.name, e.target.value)}
-                  className="h-8 w-8 rounded-md border cursor-pointer"
+                  className="h-8 w-8 rounded-md border border-border cursor-pointer bg-transparent"
                 />
               ) : (
                 <input
