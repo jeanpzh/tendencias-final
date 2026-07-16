@@ -21,13 +21,15 @@ interface MessageProps {
     role: "user" | "assistant" | "system";
     content?: string;
     parts?: MessagePart[];
+    [key: string]: any;
   };
 }
 
 export function Message({ message }: MessageProps) {
   const isUser = message.role === "user";
 
-  const textContent = message.content || "";
+  const textParts = message.parts?.filter((p) => p.type === "text") || [];
+  const textContent = textParts.map((p: any) => p.text).join("");
   const toolParts = message.parts?.filter((p) => p.type === "tool-invocation") || [];
 
   return (

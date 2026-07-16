@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import {
-  BarChart3,
   FileInput,
   LayoutDashboard,
-  Code2,
   Kanban,
   Settings2,
   ArrowRight,
@@ -14,10 +12,8 @@ import {
 import { DEMOS } from "@/lib/constants";
 
 const iconMap = {
-  BarChart3,
   FileInput,
   LayoutDashboard,
-  Code2,
   Kanban,
   Settings2,
 };

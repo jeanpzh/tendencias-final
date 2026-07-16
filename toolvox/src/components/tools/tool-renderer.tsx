@@ -89,6 +89,8 @@ export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
         <DashboardBlock
           title={data.title}
           kpis={data.kpis}
+          charts={data.charts}
+          tables={data.tables}
         />
       );
     case "render_kanban":

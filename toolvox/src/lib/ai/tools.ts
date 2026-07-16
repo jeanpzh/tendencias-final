@@ -39,6 +39,25 @@ const dashboardKPISchema = z.object({
   trend: z.enum(["up", "down", "neutral"]).optional(),
 });
 
+const dashboardChartSchema = z.object({
+  type: z.enum(["bar", "line", "pie", "area"]),
+  title: z.string(),
+  data: z.array(
+    z.object({
+      name: z.string(),
+      value: z.number(),
+    })
+  ),
+});
+
+const dashboardTableSchema = z.object({
+  title: z.string(),
+  columns: z.array(tableColumnSchema),
+  rows: z.array(tableRowSchema),
+  searchable: z.boolean().optional(),
+  sortable: z.boolean().optional(),
+});
+
 const kanbanColumnSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -97,10 +116,12 @@ export const tools = {
 
   render_dashboard: tool({
     description:
-      "Renderiza un mini-dashboard con KPIs, métricas principales y resúmenes. Usa esta tool cuando el usuario pida un resumen, overview, dashboard, o métricas.",
+      "Renderiza un mini-dashboard con KPIs, charts y tablas. Usa esta tool cuando el usuario pida un resumen, overview, dashboard, métricas, o visualización de datos. Puedes incluir múltiples charts y tablas en un solo dashboard.",
     inputSchema: z.object({
       title: z.string(),
-      kpis: z.array(dashboardKPISchema),
+      kpis: z.array(dashboardKPISchema).optional(),
+      charts: z.array(dashboardChartSchema).optional(),
+      tables: z.array(dashboardTableSchema).optional(),
     }),
     execute: async (args: any) => args,
   }),
