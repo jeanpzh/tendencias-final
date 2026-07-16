@@ -1,35 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/components/theme-provider";
 
 export function ThemeToggle({ className }: { className?: string }) {
-  const [dark, setDark] = useState(true);
-
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setDark(isDark);
-  }, []);
-
-  const toggle = () => {
-    const root = document.documentElement;
-    if (dark) {
-      root.classList.remove("dark");
-      root.classList.add("light");
-      setDark(false);
-    } else {
-      root.classList.add("dark");
-      root.classList.remove("light");
-      setDark(true);
-    }
-  };
+  const { dark, setDark } = useTheme();
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={toggle}
+      onClick={() => setDark(!dark)}
       className={`h-8 w-8 ${className}`}
       title={dark ? "Modo claro" : "Modo oscuro"}
     >

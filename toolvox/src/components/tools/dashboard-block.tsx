@@ -4,6 +4,7 @@ import { TrendingUp, TrendingDown, Minus } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartBlock } from "./chart-block";
 import { TableBlock } from "./table-block";
+import { useTheme } from "@/components/theme-provider";
 
 interface KPI {
   label: string;
@@ -34,30 +35,26 @@ interface DashboardBlockProps {
 }
 
 export function DashboardBlock({ title, kpis, charts, tables }: DashboardBlockProps) {
-  const trendIcon = (trend?: string) => {
-    switch (trend) {
-      case "up":
-        return <TrendingUp className="h-4 w-4 text-emerald-500" />;
-      case "down":
-        return <TrendingDown className="h-4 w-4 text-red-500" />;
-      default:
-        return <Minus className="h-4 w-4 text-muted-foreground" />;
-    }
-  };
+  const { dark } = useTheme();
 
   const trendColor = (trend?: string) => {
     switch (trend) {
-      case "up":
-        return "text-emerald-500";
-      case "down":
-        return "text-red-500";
-      default:
-        return "text-muted-foreground";
+      case "up": return "text-emerald-500";
+      case "down": return "text-red-500";
+      default: return "text-muted-foreground";
+    }
+  };
+
+  const trendIcon = (trend?: string) => {
+    switch (trend) {
+      case "up": return <TrendingUp className="h-4 w-4 text-emerald-500" />;
+      case "down": return <TrendingDown className="h-4 w-4 text-red-500" />;
+      default: return <Minus className="h-4 w-4 text-muted-foreground" />;
     }
   };
 
   return (
-    <div className="animate-fade-in-up my-3 space-y-3">
+    <div className="my-3 space-y-3">
       {kpis && kpis.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -88,12 +85,12 @@ export function DashboardBlock({ title, kpis, charts, tables }: DashboardBlockPr
       )}
 
       {charts && charts.map((chart, i) => (
-        <ChartBlock key={`chart-${i}`} type={chart.type} title={chart.title} data={chart.data} />
+        <ChartBlock key={`chart-${i}-${dark ? "d" : "l"}`} type={chart.type} title={chart.title} data={chart.data} />
       ))}
 
       {tables && tables.map((table, i) => (
         <TableBlock
-          key={`table-${i}`}
+          key={`table-${i}-${dark ? "d" : "l"}`}
           title={table.title}
           columns={table.columns}
           rows={table.rows}

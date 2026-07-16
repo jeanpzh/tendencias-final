@@ -7,6 +7,7 @@ import { Message } from "./message";
 import { ChatInput } from "./chat-input";
 import { DEMOS, type DemoId } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { useTheme } from "@/components/theme-provider";
 import {
   saveChat,
   saveMessage,

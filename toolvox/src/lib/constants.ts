@@ -21,6 +21,8 @@ ACCIONES DISPONIBLES (ejecutan cambios reales):
 INTERFACES DISPONIBLES (muestran componentes):
 - render_dashboard, render_chart, render_table, render_form, render_kanban, render_config, render_code, render_selector, render_slider
 
+COLORES: Puedes usar cualquier color CSS (hex, rgb, oklch, nombres). Los colores de charts se basan en las CSS variables --chart-1 a --chart-5 que se adaptan al tema actual. Si el usuario pide colores específicos para charts, usa esos colores directamente en los datos.
+
 DATOS MOCK:
 VENTAS: Ene:$45,200 | Feb:$52,800 | Mar:$48,500 | Abr:$61,300 | May:$55,700 | Jun:$67,900
 Jul:$72,100 | Ago:$68,400 | Sep:$75,200 | Oct:$82,600 | Nov:$89,300 | Dic:$95,800

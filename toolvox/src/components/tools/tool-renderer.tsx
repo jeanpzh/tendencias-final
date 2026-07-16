@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
 import { Loader2 } from "lucide-react";
+import { useTheme } from "@/components/theme-provider";
 import { ChartBlock } from "./chart-block";
 import { TableBlock } from "./table-block";
 import { FormBlock } from "./form-block";
@@ -12,40 +12,11 @@ import { CodeBlock } from "./code-block";
 import { SelectorBlock } from "./selector-block";
 import { SliderBlock } from "./slider-block";
 
-function applyAction(action: Record<string, any>) {
-  const root = document.documentElement;
-
-  switch (action.action) {
-    case "set_theme":
-      if (action.mode === "dark") {
-        root.classList.add("dark");
-        root.classList.remove("light");
-      } else {
-        root.classList.remove("dark");
-        root.classList.add("light");
-      }
-      break;
-    case "set_font_size":
-      root.style.fontSize = `${action.size}px`;
-      break;
-    case "set_font":
-      root.style.setProperty("--font-sans", action.family);
-      break;
-    case "set_accent_color":
-      root.style.setProperty("--primary", action.color);
-      break;
-  }
-}
-
-function ActionConfirmation({ action }: { action: Record<string, any> }) {
-  useEffect(() => {
-    applyAction(action);
-  }, [action]);
-
+function ActionConfirmation({ action, theme }: { action: Record<string, any>; theme: ReturnType<typeof useTheme> }) {
   const labels: Record<string, string> = {
     set_theme: action.mode === "dark" ? "Modo oscuro activado" : "Modo claro activado",
     set_font_size: `Tamaño de fuente: ${action.size}px`,
-    set_font: `Fuente: ${action.family}`,
+    set_font: `Fuente cambiada`,
     set_accent_color: `Color de acento cambiado`,
   };
 
@@ -86,11 +57,7 @@ const TOOL_LABELS: Record<string, string> = {
 
 export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
   const { toolName, args, state, result } = toolInvocation;
-
-  // Handle action tools on result
-  if (state === "result" && result?.action) {
-    return <ActionConfirmation action={result} />;
-  }
+  const theme = useTheme();
 
   if (state === "call") {
     const label = TOOL_LABELS[toolName] || toolName;
@@ -114,6 +81,26 @@ export function ToolRenderer({ toolInvocation }: ToolRendererProps) {
         Error al ejecutar la herramienta
       </div>
     );
+  }
+
+  // Handle action tools on result
+  if (state === "result" && result?.action) {
+    // Apply the action using the context
+    switch (result.action) {
+      case "set_theme":
+        theme.setDark(result.mode === "dark");
+        break;
+      case "set_font_size":
+        theme.setFontSize(result.size);
+        break;
+      case "set_font":
+        theme.setFontFamily(result.family);
+        break;
+      case "set_accent_color":
+        theme.setAccentColor(result.color);
+        break;
+    }
+    return <ActionConfirmation action={result} theme={theme} />;
   }
 
   // Action tools don't render UI components

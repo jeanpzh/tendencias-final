@@ -1,5 +1,6 @@
 "use client";
 
+import { useTheme } from "@/components/theme-provider";
 import {
   BarChart,
   Bar,
@@ -26,20 +27,23 @@ const COLORS = [
   "hsl(var(--chart-5))",
 ];
 
-const tooltipStyle = {
-  backgroundColor: "hsl(var(--card))",
-  border: "1px solid hsl(var(--border))",
-  borderRadius: "8px",
-  fontSize: "12px",
-  color: "hsl(var(--card-foreground))",
-};
+function getTooltipStyle(dark: boolean) {
+  return {
+    backgroundColor: dark ? "oklch(0.2 0 0)" : "oklch(1 0 0)",
+    border: `1px solid ${dark ? "oklch(0.32 0 0)" : "oklch(0.922 0 0)"}`,
+    borderRadius: "8px",
+    fontSize: "12px",
+    color: dark ? "oklch(0.985 0 0)" : "oklch(0.145 0 0)",
+  };
+}
 
-const axisProps = {
-  fontSize: 12,
-  tickLine: false,
-  axisLine: false,
-  tick: { fill: "hsl(var(--muted-foreground))" },
-};
+function getGridStroke(dark: boolean) {
+  return dark ? "oklch(0.32 0 0)" : "oklch(0.922 0 0)";
+}
+
+function getTickFill(dark: boolean) {
+  return dark ? "oklch(0.708 0 0)" : "oklch(0.556 0 0)";
+}
 
 interface ChartBlockProps {
   type: "bar" | "line" | "pie" | "area";
@@ -48,13 +52,27 @@ interface ChartBlockProps {
 }
 
 export function ChartBlock({ type, title, data }: ChartBlockProps) {
+  const { dark } = useTheme();
+  const key = `${dark ? "d" : "l"}-${title}`;
+
+  const tooltipStyle = getTooltipStyle(dark);
+  const gridStroke = getGridStroke(dark);
+  const tickFill = getTickFill(dark);
+
+  const axisProps = {
+    fontSize: 12,
+    tickLine: false,
+    axisLine: false,
+    tick: { fill: tickFill },
+  };
+
   const renderChart = () => {
     switch (type) {
       case "bar":
         return (
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} vertical={false} />
               <XAxis dataKey="name" {...axisProps} />
               <YAxis {...axisProps} />
               <Tooltip contentStyle={tooltipStyle} />
@@ -70,7 +88,7 @@ export function ChartBlock({ type, title, data }: ChartBlockProps) {
         return (
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} vertical={false} />
               <XAxis dataKey="name" {...axisProps} />
               <YAxis {...axisProps} />
               <Tooltip contentStyle={tooltipStyle} />
@@ -112,7 +130,7 @@ export function ChartBlock({ type, title, data }: ChartBlockProps) {
         return (
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
+              <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} vertical={false} />
               <XAxis dataKey="name" {...axisProps} />
               <YAxis {...axisProps} />
               <Tooltip contentStyle={tooltipStyle} />
